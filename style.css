@@ -74,6 +74,9 @@ header nav a.nav-contact:hover .nav-contact-arrow,header nav a.nav-contact:focus
 header nav a.nav-contact:active{transform:translateY(0);box-shadow:inset 0 2px 5px #38241240,0 3px 10px #0002}
 .logo{transition:opacity .35s ease}
 .logo:hover,.logo:focus-visible{opacity:.7;color:inherit}
+.footer-nav a{position:relative;padding-bottom:8px}
+.footer-nav a:after{content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold-accent-gradient);transition:width .3s ease}
+.footer-nav a:hover:after,.footer-nav a:focus-visible:after{width:100%}
 @media(min-width:761px) and (max-width:1100px){
  header nav a.nav-contact{min-height:50px;padding:0 7px 0 17px;gap:12px}
  .nav-contact-hint{display:none}.nav-contact-label{font-size:13px}.nav-contact-arrow{width:36px;height:36px;font-size:19px}
