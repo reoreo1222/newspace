@@ -1,9 +1,20 @@
 // Do not let browsers restore a stale scroll position after a reload.
 if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 if (!location.hash) {
-  const resetScroll = () => window.scrollTo({top:0, left:0, behavior:'auto'});
-  resetScroll();
-  window.addEventListener('pageshow', () => { resetScroll(); requestAnimationFrame(resetScroll); }, {once:true});
+  const resetScroll = () => {
+    if (document.activeElement instanceof HTMLElement && document.activeElement !== document.body) document.activeElement.blur();
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    window.scrollTo({top:0, left:0, behavior:'auto'});
+  };
+  const settleAtTop = () => {
+    resetScroll();
+    requestAnimationFrame(() => { resetScroll(); requestAnimationFrame(resetScroll); });
+    [60, 180, 420].forEach(delay => setTimeout(resetScroll, delay));
+  };
+  settleAtTop();
+  window.addEventListener('pageshow', settleAtTop);
+  window.addEventListener('load', settleAtTop, {once:true});
 }
 
 const menu = document.querySelector('.menu-toggle');
