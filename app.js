@@ -2,6 +2,8 @@ const menu = document.querySelector('.menu-toggle');
 menu?.addEventListener('click', () => { const open = menu.getAttribute('aria-expanded') !== 'true'; menu.setAttribute('aria-expanded', String(open)); document.querySelector('nav').classList.toggle('open', open); menu.querySelector('span').textContent = open ? '−' : '＋'; });
 document.addEventListener('keydown', e => { if(e.key === 'Escape' && menu?.getAttribute('aria-expanded') === 'true') { menu.click(); menu.focus(); } });
 document.querySelectorAll('#navigation a, .footer-nav a').forEach(a => {
+  const href = a.getAttribute('href') || '';
+  if (href.startsWith('#')) { a.removeAttribute('aria-current'); return; }
   const path = decodeURI(location.pathname).replace(/\/$/, '');
   const target = decodeURI(a.pathname).replace(/\/$/, '');
   if (path === target) a.setAttribute('aria-current', 'page');
