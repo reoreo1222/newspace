@@ -292,7 +292,8 @@ header nav a[aria-current=location]:after{width:100%}
  @keyframes about-mask-upper{to{transform:translateX(100%)}}
  @keyframes about-mask-lower{to{transform:translateX(-100%)}}
 }
-@media(max-width:760px){.intro.section{grid-template-columns:1fr}.about-type-reveal{height:430px}.about-type-mask{padding:20px 14px 20px 32px}.about-type-mask span{font-size:clamp(64px,18vw,88px)}}
+@media(max-width:760px){.intro.section{grid-template-columns:1fr;gap:22px}.about-type-reveal{height:340px}.about-type-mask{padding:20px 14px 20px 32px}.about-type-mask span{font-size:clamp(64px,18vw,88px)}.intro-content{padding-top:42px}}
+@media(max-width:380px){.intro.section{gap:18px}.about-type-reveal{height:310px}.intro-content{padding-top:36px}}
 @media print{.about-type-mask:before,.about-type-mask:after{display:none}}
 
 /* Persistent, gently hopping shortcut back to the first view. */
