@@ -326,13 +326,15 @@ header nav a[aria-current=location]:after{width:100%}
  .home-hero .hero-visual{position:relative;inset:auto;width:100%;height:auto;border-radius:0}
  .home-hero .hero-slide{object-position:58% center}
  .home-hero .hero-content{position:relative;inset:auto;width:100%;height:auto;min-height:0;padding:28px 22px 32px clamp(58px,16vw,68px);display:flex;align-items:center;background:#f9f8f4;box-shadow:none}
- .home-hero .hero-ja{font-size:clamp(19px,5.6vw,23px);line-height:1.55;letter-spacing:.025em}
+ .home-hero .hero-ja{font-size:clamp(23px,6.7vw,29px);line-height:1.52;letter-spacing:.035em}
+ .home-hero .hero-ja>span:last-child{width:max-content;transform:scaleX(.93);transform-origin:left center}
  .home-hero .hero-en{display:block;margin-top:12px;font-size:9px;letter-spacing:.08em}
 }
 @supports not (overflow:clip){@media(max-width:760px){html,body{overflow-x:hidden}}}
 @media(max-width:380px){
  .home-hero{grid-template-rows:58% 42%}
  .home-hero .hero-content{padding:24px 18px 28px 54px}
- .home-hero .hero-ja{font-size:clamp(18px,5.5vw,20px)}
+ .home-hero .hero-ja{font-size:clamp(21px,6.4vw,24px)}
+ .home-hero .hero-ja>span:last-child{transform:scaleX(.945)}
 }
 @media(prefers-reduced-motion:reduce){.menu-icon i{transition:none}}
