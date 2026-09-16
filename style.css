@@ -322,17 +322,17 @@ header nav a[aria-current=location]:after{width:100%}
  .menu-toggle[aria-expanded="true"] .menu-icon i:nth-child(1){top:11px;width:100%;transform:rotate(45deg)}
  .menu-toggle[aria-expanded="true"] .menu-icon i:nth-child(2){opacity:0}
  .menu-toggle[aria-expanded="true"] .menu-icon i:nth-child(3){top:11px;width:100%;transform:rotate(-45deg)}
- .home-hero{display:grid;grid-template-rows:auto auto;height:auto;min-height:0;max-height:none;overflow:visible;background:#f9f8f4}
- .home-hero .hero-visual{position:relative;inset:auto;width:100%;height:clamp(500px,72svh,680px);border-radius:0}
+ .home-hero{display:grid;grid-template-rows:60% 40%;height:calc(100svh - 80px);min-height:0;max-height:none;overflow:hidden;background:#f9f8f4}
+ .home-hero .hero-visual{position:relative;inset:auto;width:100%;height:auto;border-radius:0}
  .home-hero .hero-slide{object-position:58% center}
- .home-hero .hero-content{position:relative;inset:auto;width:100%;height:auto;min-height:310px;padding:62px 26px 72px;display:flex;align-items:center;background:#f9f8f4;box-shadow:none}
- .home-hero .hero-ja{font-size:clamp(24px,7vw,30px);line-height:1.58;letter-spacing:.035em}
- .home-hero .hero-en{display:block;margin-top:19px;font-size:11px;letter-spacing:.1em}
+ .home-hero .hero-content{position:relative;inset:auto;width:100%;height:auto;min-height:0;padding:28px 26px 32px;display:flex;align-items:center;background:#f9f8f4;box-shadow:none}
+ .home-hero .hero-ja{font-size:clamp(23px,6.7vw,29px);line-height:1.52;letter-spacing:.035em}
+ .home-hero .hero-en{display:block;margin-top:13px;font-size:10px;letter-spacing:.09em}
 }
 @supports not (overflow:clip){@media(max-width:760px){html,body{overflow-x:hidden}}}
 @media(max-width:380px){
- .home-hero .hero-visual{height:clamp(470px,70svh,600px)}
- .home-hero .hero-content{min-height:285px;padding:54px 22px 64px}
- .home-hero .hero-ja{font-size:clamp(22px,6.6vw,25px)}
+ .home-hero{grid-template-rows:58% 42%}
+ .home-hero .hero-content{padding:24px 22px 28px}
+ .home-hero .hero-ja{font-size:clamp(21px,6.4vw,24px)}
 }
 @media(prefers-reduced-motion:reduce){.menu-icon i{transition:none}}
