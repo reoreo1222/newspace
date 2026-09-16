@@ -296,6 +296,17 @@ header nav a[aria-current=location]:after{width:100%}
 @media(max-width:380px){.intro.section{gap:18px}.about-type-reveal{height:310px}.intro-content{padding-top:36px}}
 @media print{.about-type-mask:before,.about-type-mask:after{display:none}}
 
+/* Keep mobile content gutters balanced, including the offset service cards. */
+@media(max-width:760px){
+ .intro.section{padding-left:26px;padding-right:26px}
+ .intro-photo{margin-left:0}
+ .home-services .section{padding-left:26px;padding-right:26px}
+ .home-services .service-card,.home-services .service-card:nth-child(2){padding-left:36px;padding-right:36px}
+ footer>.logo{margin-inline:auto}
+ .footer-nav{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:0;width:100%;padding:0;font-size:13px}
+ .footer-nav a{padding:10px 0}
+}
+
 /* Persistent, gently hopping shortcut back to the first view. */
 .scroll-to-top{position:fixed;z-index:19;left:25px;bottom:28px;display:flex;align-items:center;gap:12px;padding:8px 5px;color:var(--gold-text);font-size:10px;font-weight:600;line-height:1;letter-spacing:.14em;writing-mode:vertical-rl;transform:rotate(180deg);transition:color .4s ease}
 .scroll-to-top i{display:block;width:1px;height:52px;background:var(--gold-mid);transition:background-color .4s ease}
