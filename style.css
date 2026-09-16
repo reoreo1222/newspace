@@ -291,8 +291,10 @@ header nav a[aria-current=location]:after{width:100%}
 @media print{.about-type-mask:before,.about-type-mask:after{display:none}}
 
 /* Persistent, gently hopping shortcut back to the first view. */
-.scroll-to-top{position:fixed;z-index:19;left:25px;bottom:28px;display:flex;align-items:center;gap:12px;padding:8px 5px;color:var(--gold-text);font-size:10px;font-weight:600;line-height:1;letter-spacing:.14em;writing-mode:vertical-rl;transform:rotate(180deg);filter:drop-shadow(0 1px 2px #fff) drop-shadow(0 0 6px #fff);transition:color .4s ease}
-.scroll-to-top i{display:block;width:1px;height:52px;background:var(--gold-mid)}
+.scroll-to-top{position:fixed;z-index:19;left:25px;bottom:28px;display:flex;align-items:center;gap:12px;padding:8px 5px;color:var(--gold-text);font-size:10px;font-weight:600;line-height:1;letter-spacing:.14em;writing-mode:vertical-rl;transform:rotate(180deg);transition:color .4s ease}
+.scroll-to-top i{display:block;width:1px;height:52px;background:var(--gold-mid);transition:background-color .4s ease}
+.scroll-to-top.is-on-dark{color:#fff}
+.scroll-to-top.is-on-dark i{background:#fff}
 .scroll-to-top:hover,.scroll-to-top:focus-visible{color:var(--gold-deep)}
 @media(prefers-reduced-motion:no-preference){
  .scroll-to-top{animation:scroll-soft-hop 4s ease-in-out infinite}

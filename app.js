@@ -9,6 +9,31 @@ document.querySelectorAll('#navigation a, .footer-nav a').forEach(a => {
   if (path === target) a.setAttribute('aria-current', 'page');
   else if (target && path.startsWith(target + '/')) a.setAttribute('aria-current', 'location');
 });
+
+// Keep the fixed SCROLL control readable without a glow: use white only on dark sections.
+(() => {
+  const control = document.querySelector('.scroll-to-top');
+  if (!control) return;
+  const darkSections = [...document.querySelectorAll('.services, .home-contact, footer')];
+  let frame = 0;
+  const sync = () => {
+    frame = 0;
+    const controlBox = control.getBoundingClientRect();
+    const sampleY = controlBox.top + controlBox.height / 2;
+    const onDark = darkSections.some(section => {
+      const box = section.getBoundingClientRect();
+      return box.top <= sampleY && box.bottom >= sampleY;
+    });
+    control.classList.toggle('is-on-dark', onDark);
+  };
+  const requestSync = () => {
+    if (frame) return;
+    frame = requestAnimationFrame(sync);
+  };
+  window.addEventListener('scroll', requestSync, {passive:true});
+  window.addEventListener('resize', requestSync);
+  sync();
+})();
 const form = document.querySelector('#contact-form');
 form?.addEventListener('submit', e => {
   e.preventDefault();
