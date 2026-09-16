@@ -310,6 +310,9 @@ header nav a[aria-current=location]:after{width:100%}
 
 /* Mobile header and first view: compact enough to show the image and message in one screen. */
 @media(max-width:760px){
+ html,body{max-width:100%;overflow-x:clip}
+ .section-heading{flex-direction:column;align-items:flex-start}
+ .section-heading>.text-link{margin-top:0}
  .menu-toggle{display:grid;width:48px;height:48px;place-items:center;gap:0;padding:0}
  .menu-icon{position:relative;display:block;width:30px;height:22px;font-size:0;line-height:0}
  .menu-icon i{position:absolute;left:0;display:block;width:100%;height:2px;background:#fff;transform-origin:center;transition:top .32s ease,transform .32s ease,opacity .22s ease}
@@ -325,6 +328,7 @@ header nav a[aria-current=location]:after{width:100%}
  .home-hero .hero-ja{font-size:clamp(21px,6vw,27px);line-height:1.52;letter-spacing:.035em}
  .home-hero .hero-en{display:none}
 }
+@supports not (overflow:clip){@media(max-width:760px){html,body{overflow-x:hidden}}}
 @media(max-width:380px){
  .home-hero{min-height:0}
  .home-hero .hero-visual{inset:14px 0 auto 12px;height:49%}
