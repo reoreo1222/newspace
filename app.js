@@ -1,3 +1,11 @@
+// Do not let browsers restore a stale scroll position after a reload.
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+if (!location.hash) {
+  const resetScroll = () => window.scrollTo({top:0, left:0, behavior:'auto'});
+  resetScroll();
+  window.addEventListener('pageshow', () => { resetScroll(); requestAnimationFrame(resetScroll); }, {once:true});
+}
+
 const menu = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('#navigation');
 const setMenuOpen = open => { menu?.setAttribute('aria-expanded', String(open)); menu?.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く'); navigation?.classList.toggle('open', open); document.body.classList.toggle('menu-open', open); };
