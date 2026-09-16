@@ -1,5 +1,8 @@
 const menu = document.querySelector('.menu-toggle');
-menu?.addEventListener('click', () => { const open = menu.getAttribute('aria-expanded') !== 'true'; menu.setAttribute('aria-expanded', String(open)); menu.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く'); document.querySelector('nav').classList.toggle('open', open); });
+const navigation = document.querySelector('#navigation');
+const setMenuOpen = open => { menu?.setAttribute('aria-expanded', String(open)); menu?.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く'); navigation?.classList.toggle('open', open); document.body.classList.toggle('menu-open', open); };
+menu?.addEventListener('click', () => setMenuOpen(menu.getAttribute('aria-expanded') !== 'true'));
+navigation?.addEventListener('click', e => { if(e.target.closest('a')) setMenuOpen(false); });
 document.addEventListener('keydown', e => { if(e.key === 'Escape' && menu?.getAttribute('aria-expanded') === 'true') { menu.click(); menu.focus(); } });
 document.querySelectorAll('#navigation a, .footer-nav a').forEach(a => {
   const href = a.getAttribute('href') || '';
