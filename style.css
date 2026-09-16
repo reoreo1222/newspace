@@ -289,3 +289,14 @@ header nav a[aria-current=location]:after{width:100%}
 }
 @media(max-width:760px){.intro.section{grid-template-columns:1fr}.about-type-reveal{height:430px}.about-type-mask{padding:20px 14px 20px 32px}.about-type-mask span{font-size:clamp(64px,18vw,88px)}}
 @media print{.about-type-mask:before,.about-type-mask:after{display:none}}
+
+/* Persistent, gently hopping shortcut back to the first view. */
+.scroll-to-top{position:fixed;z-index:19;left:25px;bottom:28px;display:flex;align-items:center;gap:12px;padding:8px 5px;color:var(--gold-text);font-size:10px;font-weight:600;line-height:1;letter-spacing:.14em;writing-mode:vertical-rl;transform:rotate(180deg);filter:drop-shadow(0 1px 2px #fff) drop-shadow(0 0 6px #fff);transition:color .4s ease}
+.scroll-to-top i{display:block;width:1px;height:52px;background:var(--gold-mid)}
+.scroll-to-top:hover,.scroll-to-top:focus-visible{color:var(--gold-deep)}
+@media(prefers-reduced-motion:no-preference){
+ .scroll-to-top{animation:scroll-soft-hop 4s ease-in-out infinite}
+ @keyframes scroll-soft-hop{0%,5%,10%,15%,100%{translate:0 0}2.5%{translate:0 -6px}7.5%{translate:0 -4px}}
+}
+@media(max-width:760px){.scroll-to-top{left:12px;bottom:18px;font-size:9px;gap:9px}.scroll-to-top i{height:38px}}
+@media print{.scroll-to-top{display:none}}
