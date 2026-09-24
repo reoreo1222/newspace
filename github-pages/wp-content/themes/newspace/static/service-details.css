@@ -758,6 +758,26 @@
 .service-refined.service-facade #scope :is(.sd-scope-intro,.sd-editorial),
 .service-refined.service-facade #approach>div,
 .service-refined.service-facade #approach>ol{width:100%;max-width:var(--sd-content-max);margin-inline:auto;box-sizing:border-box}
+.service-refined.service-facade #approach{padding-inline:max(24px,calc((100% - var(--sd-content-max))/2))}
+.service-refined.service-facade #approach>div{padding-inline:0}
+.service-refined.service-facade #approach>div>.sd-heading{max-width:none}
+.service-refined.service-facade #approach li.sd-approach-row:nth-child(n){padding-inline:0;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);column-gap:6%}
+.service-refined.service-facade #approach li.sd-approach-row:nth-child(even){grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)}
+.service-refined.service-facade #approach .sd-approach-copy{min-width:0;padding-left:clamp(50px,5vw,85px)}
+@media(max-width:760px){
+ .service-refined.service-facade #approach li.sd-approach-row:nth-child(n){grid-template-columns:minmax(0,1fr)}
+ .service-refined.service-facade #approach .sd-approach-copy{padding-left:50px}
+}
+
+/* Keep story numbers in normal flow so they never overlap the copy. */
+.service-refined.service-facade #approach li:nth-child(n) .sd-approach-copy{display:flex;flex-direction:column;align-items:flex-start;gap:20px;padding:0;min-height:0;min-width:0;isolation:auto}
+.service-refined.service-facade #approach li:nth-child(n) .sd-approach-number{position:static;z-index:auto;flex:none;width:76px;height:76px;margin:0;border:1px solid #c9b996;border-radius:50%;font-size:27px;line-height:1;color:#a78a54}
+.service-refined.service-facade #approach li:nth-child(n) .sd-approach-copy h3{display:block;width:100%;box-sizing:border-box;margin:0;padding:0;background:transparent;overflow-wrap:anywhere;text-wrap:pretty}
+.service-refined.service-facade #approach li:nth-child(n) .sd-approach-copy p{width:100%;max-width:none;box-sizing:border-box;margin:0;padding:0;background:transparent;overflow-wrap:anywhere}
+@media(max-width:760px){
+ .service-refined.service-facade #approach li:nth-child(n) .sd-approach-copy{gap:16px;padding:0}
+ .service-refined.service-facade #approach li:nth-child(n) .sd-approach-number{width:62px;height:62px;font-size:23px}
+}
 
 /* Turn the three consultation prompts into quiet architectural panels. */
 .service-refined.service-facade #scope .sd-concern-list{gap:clamp(14px,1.7vw,26px)}
@@ -767,8 +787,7 @@
 .service-refined.service-facade #scope .sd-concern-list small{position:absolute;top:14px;right:17px;color:#a38c66;font:400 11px/1.2 Georgia,serif;letter-spacing:.12em}
 .service-refined.service-facade #scope .sd-concern-list li:hover{transform:translateY(-3px);border-color:#cbbd9f;box-shadow:0 22px 42px -31px #28251f8c}
 
-/* Keep the first strengths image landscape, consistent with the other stories. */
-.service-refined.service-facade #approach .sd-approach-row:first-child .sd-approach-photo{min-height:0;aspect-ratio:1.5;height:auto;align-self:start}
+/* Use the same stretched photo layout for all three strengths stories. */
 .service-refined.service-facade #approach .sd-approach-row:first-child .sd-approach-photo img{object-position:center}
 
 @media(max-width:760px){
@@ -777,5 +796,57 @@
  .service-refined.service-facade #scope .sd-concern-icon{flex-basis:30px;width:30px;height:30px}
  .service-refined.service-facade #scope .sd-concern-list small{top:12px;right:13px}
  .service-refined.service-facade #scope .sd-concern-list li:hover{transform:none}
- .service-refined.service-facade #approach .sd-approach-row:first-child .sd-approach-photo{aspect-ratio:1.35}
+}
+
+/* Large desktop screens: readable type and photographs within the 1440px grid. */
+@media(min-width:1600px){
+ .service-refined.service-facade{--sd-gutter:max(32px,calc((100vw - 1440px)/2))}
+ .service-refined.service-facade .sd-heading h2{font-size:clamp(44px,2.2vw,56px)}
+ .service-refined.service-facade .sd-heading .sd-section-lead{font-size:clamp(22px,1vw,26px)}
+ .service-refined.service-facade .sd-hero-lead{font-size:clamp(30px,1.4vw,36px)}
+ .service-refined.service-facade .sd-hero-description{max-width:900px;font-size:clamp(18px,.86vw,22px)}
+ .service-refined.service-facade .sd-anchor a{font-size:20px;min-height:138px}
+ .service-refined.service-facade #scope .sd-concern-list li{font-size:clamp(20px,.94vw,24px);min-height:140px}
+ .service-refined.service-facade #scope .sd-concern-list small{font-size:14px}
+ .service-refined.service-facade #scope .sd-service-item{min-height:440px;padding:48px 38px;grid-template-columns:48px minmax(0,1fr);gap:22px}
+ .service-refined.service-facade #scope .sd-service-copy h3{font-size:clamp(30px,1.35vw,35px)}
+ .service-refined.service-facade #scope .sd-service-copy>p:not(.sd-category){font-size:clamp(18px,.86vw,22px);line-height:2}
+ .service-refined.service-facade #approach li:nth-child(n) .sd-approach-copy h3{font-size:clamp(34px,1.6vw,41px)}
+ .service-refined.service-facade #approach li:nth-child(n) .sd-approach-copy p{font-size:clamp(18px,.86vw,22px);line-height:2}
+ .service-refined.service-facade #approach li:nth-child(n) .sd-approach-number{width:92px;height:92px;font-size:34px}
+ .service-refined.service-facade #approach .sd-approach-detail{aspect-ratio:1.4}
+ .service-refined.service-facade .sd-case-copy p,
+ .service-refined.service-facade #process .sd-flow li p,
+ .service-refined.service-facade #process .sd-process-heading>p,
+ .service-refined.service-facade .sd-faq summary,
+ .service-refined.service-facade .sd-faq .sd-answer p{font-size:clamp(18px,.86vw,22px);line-height:2}
+ .service-refined.service-facade #process .sd-flow-photo{aspect-ratio:1.25}
+ .service-refined.service-facade #process .sd-flow li h3{font-size:28px}
+ .service-refined.service-facade #process .sd-process-heading{flex-wrap:wrap}
+ .service-refined.service-facade .sd-related .care-related a{min-height:260px;font-size:26px}
+}
+
+/* Facade carousel copy uses the full card width without item numbers. */
+.service-refined.service-facade #scope .sd-service-item{grid-template-columns:minmax(0,1fr);gap:0}
+
+/* Hide numbering on the facade page section navigation. */
+.service-refined.service-facade .sd-anchor a::before{content:none}
+
+/* Compact three-column strengths for the facade page. */
+.service-refined.service-facade #approach{padding-block:80px 90px}
+.service-refined.service-facade #approach>div>.sd-heading{margin-bottom:48px}
+.service-refined.service-facade #approach>ol{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;padding:0;list-style:none}
+.service-refined.service-facade #approach li.sd-approach-row:nth-child(n){display:flex;flex-direction:column;gap:26px;padding:0;margin:0;min-width:0;background:none}
+.service-refined.service-facade #approach li:nth-child(n) .sd-approach-photo{order:-1;width:100%;height:auto;min-height:0;aspect-ratio:3/2;margin:0;box-shadow:none;align-self:auto;overflow:hidden}
+.service-refined.service-facade #approach li:nth-child(n) .sd-approach-photo img{width:100%;height:100%;object-fit:cover}
+.service-refined.service-facade #approach li:nth-child(n) .sd-approach-detail{display:none}
+.service-refined.service-facade #approach li:nth-child(n) .sd-approach-copy{gap:16px;width:100%;padding:0}
+.service-refined.service-facade #approach li:nth-child(n) .sd-approach-number{width:auto;height:auto;border:0;border-radius:0;font-size:28px;line-height:1.2}
+.service-refined.service-facade #approach li:nth-child(n) .sd-approach-copy h3{font-size:clamp(21px,1.5vw,28px);line-height:1.7;letter-spacing:.02em}
+.service-refined.service-facade #approach li:nth-child(n) .sd-approach-copy p{font-size:clamp(15px,1vw,18px);line-height:2}
+@media(max-width:900px){
+ .service-refined.service-facade #approach{padding-block:60px}
+ .service-refined.service-facade #approach>ol{grid-template-columns:minmax(0,1fr);gap:48px}
+ .service-refined.service-facade #approach li:nth-child(n) .sd-approach-copy h3{font-size:24px}
+ .service-refined.service-facade #approach li:nth-child(n) .sd-approach-photo{aspect-ratio:16/9}
 }

@@ -1,0 +1,82 @@
+/* Newspace company page: quiet typography, generous photography, warm gold. */
+#main.about-designed{--about-gold:#c5a45f;--about-ink:#292a27;--about-inset:max(32px,calc((100% - 1440px)/2));background:#fff;color:var(--about-ink)}
+#main.about-designed .breadcrumb{padding:20px 7%;font-size:12px;line-height:2;background:#fff}
+#main.about-designed .photo-heading{height:clamp(360px,50svh,630px);margin:0 24px;align-items:flex-end;position:relative;overflow:hidden}
+#main.about-designed .photo-heading-copy{padding:0 6vw 56px;display:flex;flex-direction:column;gap:20px}
+#main.about-designed .photo-heading h1{font-family:var(--serif);font-size:clamp(36px,4.5vw,72px);font-weight:500;line-height:1.5;letter-spacing:.08em;margin:0}
+#main.about-designed .photo-heading-copy>p{order:-1;font-size:12px;letter-spacing:.25em;color:#e2ce9e;margin:0}
+#main.about-designed .photo-heading:before{background:linear-gradient(90deg,#191b18b3,#191b181a),linear-gradient(0deg,#191b1855,transparent)}
+#main.about-designed .section{max-width:none;margin:0;padding:100px var(--about-inset)}
+#main.about-designed .eyebrow{font-size:12px;letter-spacing:.2em;font-weight:500;line-height:1.8;color:#a08245;margin:0 0 22px}
+#main.about-designed .intro{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);gap:56px 7%;align-items:center;padding-block:104px 120px}
+#main.about-designed .mission-label{grid-column:1/-1;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+#main.about-designed .mission-label .eyebrow{margin:0}
+#main.about-designed .mission-word{display:none}
+#main.about-designed .mission-label .section-label{margin:0;padding-left:28px;border-left:1px solid #c5a45f;font-size:14px;color:#69665d;letter-spacing:.08em}
+#main.about-designed .mission-copy{grid-column:2;grid-row:2;min-width:0}
+#main.about-designed .mission-copy h2{font-family:var(--serif);font-size:clamp(28px,2.5vw,42px);line-height:1.85;letter-spacing:.035em;font-weight:500;margin:0 0 30px}
+#main.about-designed .mission-copy>p{font-size:clamp(15px,1vw,18px);line-height:2.25;color:#666259;margin:0 0 20px;max-width:100%}
+#main.about-designed .mission-media{grid-column:1;grid-row:2;height:auto;aspect-ratio:5/6;margin:0;position:relative;overflow:visible;isolation:isolate}
+#main.about-designed .mission-media:before{content:'';position:absolute;top:-22px;left:-22px;width:82px;height:82px;background:var(--about-gold);z-index:-1}
+#main.about-designed .mission-media .mission-photo{display:block;width:100%;height:100%;object-fit:cover;margin:0;object-position:center}
+#main.about-designed .values-numbered{background:var(--about-ink);color:#fff}
+#main.about-designed .values-inner{padding-block:90px 104px}
+#main.about-designed .values-heading{display:flex;justify-content:space-between;align-items:center;gap:32px;margin-bottom:64px}
+#main.about-designed .values-heading .eyebrow{color:var(--about-gold);margin:0}
+#main.about-designed .values-heading .eyebrow:before{display:none}
+#main.about-designed .values-heading h2{font-size:clamp(28px,2.6vw,42px);font-weight:500;letter-spacing:.03em;line-height:1.6;margin:0;color:#fff}
+#main.about-designed .values-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:44px}
+#main.about-designed .value-row{display:flex;flex-direction:column;gap:32px;padding:0 0 0 28px;border:0;border-left:1px solid #c5a45f66;min-width:0}
+#main.about-designed .value-number{font:italic 44px/1 Georgia,serif;color:var(--about-gold);background:none;-webkit-text-fill-color:currentColor;letter-spacing:0;padding:0}
+#main.about-designed .value-copy{padding:0}
+#main.about-designed .value-en{font:400 clamp(22px,1.7vw,30px)/1.4 Georgia,serif;color:#e3d4b1;letter-spacing:0;margin:0 0 16px}
+#main.about-designed .value-copy h3{font-family:var(--serif);font-size:clamp(21px,1.5vw,27px);font-weight:500;line-height:1.8;letter-spacing:.015em;color:#fff;margin:0 0 24px}
+#main.about-designed .value-body{font-size:clamp(15px,1vw,18px);line-height:2.15;color:#d0cdc5;margin:0}
+#main.about-designed .company-profile{display:grid;grid-template-columns:minmax(0,.65fr) minmax(0,1.35fr);gap:9%;padding-block:112px;background:#f5f3ee}
+#main.about-designed .profile-heading h2{font-family:var(--serif);font-size:clamp(30px,2.7vw,44px);font-weight:500;line-height:1.6;margin:0}
+#main.about-designed .rows{margin:0;border:0}
+#main.about-designed .rows>div{display:grid;grid-template-columns:140px minmax(0,1fr);gap:30px;padding:28px 0;border:0;border-bottom:1px solid #ded9cf}
+#main.about-designed .rows>div:first-child{padding-top:0}
+#main.about-designed .rows dt{font-size:14px;font-weight:500;color:#82704e;line-height:2}
+#main.about-designed .rows dd{font-size:clamp(16px,1.1vw,19px);line-height:2;color:var(--about-ink);margin:0}
+#main.about-designed .water-contact-banner{padding-top:90px;background:#fff}
+#main.about-designed .water-contact-panel{border-radius:0;border-top:0;box-shadow:0 16px 55px #1e211d1a}
+@media(min-width:1900px){#main.about-designed .photo-heading{margin-inline:48px;height:630px}}
+@media(max-width:1000px){
+ #main.about-designed .intro{gap:44px 5%}
+ #main.about-designed .mission-media{aspect-ratio:4/5}
+ #main.about-designed .values-list{gap:24px}
+ #main.about-designed .value-row{padding-left:18px}
+ #main.about-designed .values-heading{align-items:flex-start;flex-direction:column;gap:18px}
+ #main.about-designed .company-profile{gap:6%;grid-template-columns:minmax(0,.65fr) minmax(0,1.35fr)}
+ #main.about-designed .rows>div{grid-template-columns:100px minmax(0,1fr);gap:18px}
+}
+@media(max-width:760px){
+ #main.about-designed{--about-inset:24px}
+ #main.about-designed .breadcrumb{padding:16px 26px;font-size:11px}
+ #main.about-designed .photo-heading{height:360px;margin:0 12px}
+ #main.about-designed .photo-heading-copy{padding:0 24px 36px;gap:14px}
+ #main.about-designed .photo-heading h1{font-size:clamp(25px,6.8vw,38px);letter-spacing:.04em}
+ #main.about-designed .photo-heading-copy>p{font-size:11px}
+ #main.about-designed .section{padding:60px 24px}
+ #main.about-designed .intro{grid-template-columns:minmax(0,1fr);gap:36px}
+ #main.about-designed .mission-label{gap:16px}
+ #main.about-designed .mission-label .section-label{font-size:12px;padding-left:16px}
+ #main.about-designed .mission-copy{grid-column:1;grid-row:3}
+ #main.about-designed .mission-copy h2{font-size:clamp(23px,5.8vw,32px);margin-bottom:24px}
+ #main.about-designed .mission-copy>p{font-size:15px;line-height:2.1}
+ #main.about-designed .mission-media{grid-column:1;grid-row:2;aspect-ratio:4/3;margin:8px 0 0 12px}
+ #main.about-designed .mission-media:before{top:-18px;left:-18px;width:60px;height:60px}
+ #main.about-designed .values-heading{margin-bottom:38px}
+ #main.about-designed .values-heading h2{font-size:26px}
+ #main.about-designed .values-list{grid-template-columns:minmax(0,1fr);gap:40px}
+ #main.about-designed .value-row{padding-left:22px;gap:22px}
+ #main.about-designed .value-number{font-size:36px}
+ #main.about-designed .value-en{font-size:25px}
+ #main.about-designed .value-copy h3{font-size:23px;margin-bottom:18px}
+ #main.about-designed .company-profile{grid-template-columns:minmax(0,1fr);gap:36px}
+ #main.about-designed .rows>div{grid-template-columns:85px minmax(0,1fr);gap:18px;padding:22px 0}
+ #main.about-designed .rows dt{font-size:12px}
+ #main.about-designed .rows dd{font-size:15px}
+ #main.about-designed .water-contact-banner{padding-top:60px}
+}

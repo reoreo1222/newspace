@@ -61,3 +61,25 @@
  motion.addEventListener('change', event => { if (event.matches) finish(); });
  window.addEventListener('beforeprint', finish);
 })();
+
+// Desktop hover disclosure, with keyboard and touch-button support.
+(() => {
+ const group = document.querySelector('.reform-nav');
+ const toggle = group?.querySelector('.reform-nav-toggle');
+ if (!toggle) return;
+ const desktop = matchMedia('(min-width:1121px)');
+ const setOpen = open => {
+  group.classList.toggle('is-open', open);
+  toggle.setAttribute('aria-expanded', String(open));
+ };
+ group.addEventListener('pointerenter', e => { if(desktop.matches && e.pointerType !== 'touch') setOpen(true); });
+ group.addEventListener('pointerleave', () => { if(!group.contains(document.activeElement)) setOpen(false); });
+ group.addEventListener('focusin', e => { if(e.target !== toggle) setOpen(true); });
+ group.addEventListener('focusout', e => { if(!group.contains(e.relatedTarget)) setOpen(false); });
+ toggle.addEventListener('click', () => setOpen(!group.classList.contains('is-open')));
+ group.addEventListener('keydown', e => {
+  if(e.key === 'Escape') {e.stopPropagation();toggle.focus();setOpen(false);}
+ });
+ document.addEventListener('pointerdown', e => { if(!group.contains(e.target)) setOpen(false); });
+ desktop.addEventListener('change', () => setOpen(false));
+})();

@@ -16,8 +16,8 @@
 .residential .water-contact-action{max-width:440px;padding:30px 40px 34px;background:#f4f1ec;margin-top:34px}
 .residential .water-contact-action:before{height:3px;width:32px;left:calc(50% - 16px);background:#696773}
 .residential .water-contact-action p{font-family:var(--sd-display,Arial);font-weight:600;font-size:16px;line-height:1.6;color:#666573;letter-spacing:.035em;margin-bottom:20px}
-.residential .water-contact-action a{width:100%;max-width:310px;min-height:62px;box-sizing:border-box;padding:17px 24px;background:#c78b59;border-radius:999px;font-family:var(--sd-display,Arial);font-size:16px;font-weight:600;line-height:1.6;letter-spacing:.05em;color:#fff}
-.residential .water-contact-action a:hover,.residential .water-contact-action a:focus-visible{background:#aa7042;color:#fff}
+.residential .water-contact-action a{width:100%;max-width:310px;min-height:62px;box-sizing:border-box;padding:17px 24px;background:#c5a45f;border-radius:999px;font-family:var(--sd-display,Arial);font-size:16px;font-weight:600;line-height:1.6;letter-spacing:.05em;color:#fff}
+.residential .water-contact-action a:hover,.residential .water-contact-action a:focus-visible{background:#a78949;color:#fff}
 @media(max-width:760px){.residential .water-contact-action{padding:27px 20px 29px}.residential .water-contact-action p{font-size:14px;margin-bottom:18px}.residential .water-contact-action a{font-size:15px;min-height:57px}}
 .residential .water-contact-description{margin:0}.residential .water-contact-action p{margin-top:0}
 

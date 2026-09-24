@@ -1,0 +1,287 @@
+/* Shared service art direction, based on the approved facade layout. */
+#main.service-designed {
+ --facade-gold:#b5965c;
+ --facade-dark:#292a27;
+ --facade-line:#ddd8ce;
+ --facade-inset:max(32px,calc((100% - 1440px)/2));
+ --sd-gutter:var(--facade-inset);
+ --sd-ink:#292a27;
+ --sd-muted:#66635d;
+ background:#fff;
+}
+#main.service-designed .sd-section {padding:96px var(--facade-inset)}
+#main.service-designed section[id] {scroll-margin-top:110px}
+#main.service-designed .sd-breadcrumb {padding:20px 7%;font-size:12px;line-height:2;letter-spacing:.035em;border-bottom:1px solid #eee;background:#fff}
+
+
+/* Five restrained navigation panels form one continuous band. */
+#main.service-designed .sd-anchor {display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;max-width:1440px;margin:48px var(--facade-inset) 0;padding:0;background:var(--facade-dark);border:0}
+#main.service-designed .sd-anchor a:nth-child(n) {display:flex;align-items:center;justify-content:flex-start;min-height:94px;padding:26px 40px 26px 24px;border:0;border-right:1px solid #ffffff26;background:transparent;color:#f8f6f0;font-size:clamp(14px,1vw,18px);letter-spacing:.04em;line-height:1.8}
+#main.service-designed .sd-anchor a:last-child {border-right:0}
+#main.service-designed .sd-anchor a::before {content:none}
+#main.service-designed .sd-anchor a>span {top:calc(50% - 12px);right:22px;bottom:auto;color:#c5a45f}
+#main.service-designed .sd-anchor a:hover {background:#454238}
+
+/* Section numbers and titles share a clear, compact editorial rhythm. */
+#main.service-designed .sd-heading {position:relative;inset:auto;display:block;width:auto;max-width:none;padding:0;margin:0 0 42px}
+#main.service-designed .sd-heading::before {display:none}
+#main.service-designed .sd-heading .sd-chapter {display:flex;align-items:center;gap:24px;position:static;font:italic 38px/1 Georgia,serif;letter-spacing:-.025em;color:var(--facade-gold);margin:0 0 24px!important}
+#main.service-designed .sd-heading .sd-chapter::after {content:'';position:static;display:block;flex:none;width:96px;height:1px;margin:0;background:var(--facade-gold);opacity:.55}
+#main.service-designed .sd-heading .sd-chapter>span:first-child {font:inherit;line-height:1;color:inherit}
+#main.service-designed .sd-heading .sd-title-line {display:flex;align-items:center;gap:48px;flex-wrap:wrap}
+#main.service-designed .sd-heading h2 {border:0;padding:0;margin:0;max-width:none;font-size:clamp(30px,2.7vw,44px);line-height:1.6;letter-spacing:.055em;font-weight:500;text-wrap:initial}
+#main.service-designed .sd-heading .sd-section-lead {padding:0;margin:0;font-size:clamp(16px,1.1vw,20px);letter-spacing:.06em;line-height:1.8;color:#777066}
+
+/* Consultation prompts and a deliberately overlapping image/card spread. */
+#main.service-designed #scope {padding:88px var(--facade-inset) 96px;background:#fff}
+#main.service-designed #scope .sd-scope-intro {display:block;margin:0 0 44px}
+#main.service-designed #scope .sd-concern-list {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:36px}
+#main.service-designed #scope .sd-concern-list li {display:flex;position:relative;align-items:center;gap:18px;min-height:104px;padding:24px;background:#f7f6f2;border:0;border-bottom:1px solid #cbbd9e;box-shadow:none;font-size:clamp(16px,1.1vw,19px);line-height:1.9;transform:none}
+#main.service-designed #scope .sd-concern-list li::after {content:'';display:block;position:absolute;top:0;right:0;width:12px;height:12px;border-top:1px solid var(--facade-gold);border-right:1px solid var(--facade-gold)}
+#main.service-designed #scope .sd-concern-icon {width:32px;height:32px;flex-basis:32px;border-color:#b5965c80;background:transparent}
+#main.service-designed #scope .sd-editorial {display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:0;align-items:center}
+#main.service-designed #scope .sd-scope-photo {width:calc(100% + 48px);min-height:0;height:auto;aspect-ratio:4/3;position:relative}
+#main.service-designed #scope .sd-scope-photo img {object-position:48% 50%}
+#main.service-designed #scope .sd-carousel {position:relative;z-index:1;display:flex;flex-direction:column;align-self:center;min-width:0;padding-top:30px}
+#main.service-designed #scope .sd-service-list {padding:0;border:0;outline:0;box-shadow:0 22px 36px -32px #14141199}
+#main.service-designed #scope .sd-service-item {display:grid;grid-template-columns:minmax(0,1fr);align-content:center;min-height:360px;height:auto;padding:44px clamp(28px,3.5vw,60px);background:var(--facade-dark);border:0;border-radius:0;box-shadow:none;gap:0}
+#main.service-designed #scope .sd-service-item::before {content:none;display:none}
+#main.service-designed #scope .sd-service-item::after {content:none;display:none}
+#main.service-designed #scope .sd-service-copy h3 {font-size:clamp(24px,1.9vw,32px);font-weight:500;line-height:1.7;margin:0 0 22px;color:#fff}
+#main.service-designed #scope .sd-service-copy>p {font-size:clamp(15px,1vw,18px);line-height:2.1;color:#d1cdc4}
+#main.service-designed #scope .sd-carousel-pagination {display:flex;gap:10px;justify-content:flex-end;margin:20px 0 0;padding:0 0 0 48px}
+#main.service-designed #scope .sd-carousel-pagination button {position:relative;width:48px;height:24px;margin:0;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;transform:none;cursor:pointer}
+#main.service-designed #scope .sd-carousel-pagination button::before {content:'';position:absolute;inset:11px 0 auto;height:2px;width:auto;border:0;border-radius:0;transform:none;background:#d8d0c0;transition:background-color .3s}
+#main.service-designed #scope .sd-carousel-pagination button[aria-current=true]::before {background:#94743b;transform:none}
+
+/* Three equally sized photo essays; the number becomes part of the card. */
+#main.service-designed #approach {padding:80px var(--facade-inset) 100px;background:#fff;border-top:0}
+#main.service-designed #approach>div>.sd-heading {margin-bottom:48px}
+#main.service-designed #approach>ol {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;align-items:stretch;margin:0;padding:0;max-width:none}
+#main.service-designed #approach li.sd-approach-row:nth-child(n) {position:relative;display:flex;flex-direction:column;gap:0;padding:0;margin:0;min-width:0;border:0;background:#fff;align-items:stretch}
+#main.service-designed #approach li:nth-child(n) .sd-approach-photo {order:-1;aspect-ratio:4/3;width:100%;height:auto;min-height:0;margin:0;box-shadow:none;align-self:auto;overflow:hidden}
+#main.service-designed #approach .sd-approach-photo img {transition:transform .8s cubic-bezier(.2,.6,.3,1)}
+#main.service-designed #approach li:hover .sd-approach-photo img {transform:scale(1.035)}
+#main.service-designed #approach li:nth-child(n) .sd-approach-copy {display:flex;flex:1;align-items:flex-start;gap:18px;position:relative;width:calc(100% - 24px);margin:-22px 0 0 24px;padding:24px 12px 24px 24px;background:#fff;border:0;border-bottom:1px solid var(--facade-line);z-index:1}
+#main.service-designed #approach li:nth-child(n) .sd-approach-number {display:flex;align-items:center;justify-content:flex-start;gap:18px;width:100%;height:auto;border:0;border-radius:0;margin:0;font:italic 34px/1 Georgia,serif;color:var(--facade-gold)}
+#main.service-designed #approach .sd-approach-number::after {content:'';height:1px;width:48px;background:var(--facade-gold);opacity:.6}
+#main.service-designed #approach li:nth-child(n) .sd-approach-copy h3 {min-height:3.4em;margin:0;padding:0;background:transparent;font-size:clamp(21px,1.5vw,27px);line-height:1.7;letter-spacing:.015em;font-weight:500;text-wrap:pretty}
+#main.service-designed #approach li:nth-child(n) .sd-approach-copy p {margin:0;padding:0;background:transparent;font-size:clamp(15px,1vw,18px);line-height:2.1;color:#625e57}
+#main.service-designed #approach li:nth-child(n) .sd-approach-detail {display:none}
+
+/* A material study: a large photograph meets a charcoal editorial panel. */
+#main.service-designed #case-study {background:#f3f1ec;padding-block:88px 100px}
+#main.service-designed .sd-case-heading {align-items:flex-end;margin-bottom:44px}
+#main.service-designed .sd-case-heading .sd-heading {min-width:0;margin:0}
+#main.service-designed .sd-text-link {border-color:#b69b68;font-size:14px;gap:28px;padding:12px 0;color:#4c4841}
+#main.service-designed .sd-text-link span {transition:transform .3s}
+#main.service-designed .sd-text-link:hover span {transform:translate(3px,-3px)}
+#main.service-designed .sd-case-grid {grid-template-columns:minmax(0,1.25fr) minmax(0,.9fr);gap:0;align-items:center}
+#main.service-designed .sd-case-feature {min-width:0}
+#main.service-designed .sd-case-feature figure {aspect-ratio:4/3;width:calc(100% + 36px)}
+#main.service-designed .sd-case-caption {padding-top:22px;display:flex;align-items:center;gap:18px}
+#main.service-designed .sd-case-caption::before {content:'';width:32px;height:1px;background:var(--facade-gold);flex-shrink:0}
+#main.service-designed .sd-case-caption h3 {font-size:clamp(17px,1.2vw,21px);font-weight:500;margin:0;letter-spacing:.04em}
+#main.service-designed .sd-case-copy {position:relative;z-index:1;padding:clamp(36px,4vw,64px);background:var(--facade-dark);color:#fff;border-top:2px solid var(--facade-gold);margin-top:42px}
+#main.service-designed .sd-case-copy h3 {color:#f8f6f0;font-size:clamp(25px,2vw,34px);font-weight:500;line-height:1.9;margin:0 0 28px;letter-spacing:.05em}
+#main.service-designed .sd-case-copy p {color:#d1cdc4;font-size:clamp(15px,1vw,18px);line-height:2.2}
+
+/* A connected sequence of four photographic steps. */
+#main.service-designed #process {display:block;background:#fff}
+#main.service-designed #process .sd-process-heading {display:flex;align-items:flex-end;flex-wrap:wrap;gap:24px;margin:0 0 54px}
+#main.service-designed #process .sd-process-heading .sd-heading {margin:0;min-width:0;width:auto}
+#main.service-designed #process .sd-process-heading h2 {font-size:clamp(30px,2.7vw,44px);line-height:1.6}
+#main.service-designed #process .sd-process-heading>p {padding:0;margin:0;font-size:clamp(15px,1vw,18px);color:#777066;line-height:2}
+#main.service-designed #process .sd-flow {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;position:relative}
+#main.service-designed #process .sd-flow li:nth-child(n) {display:flex;flex-direction:column;align-items:flex-start;position:relative;min-width:0;padding:0 0 24px;margin:0;border:0}
+#main.service-designed #process .sd-flow-photo {aspect-ratio:1.45;width:100%;margin:0 0 22px}
+#main.service-designed #process .sd-flow li>span {position:relative;display:flex;align-items:center;gap:14px;width:100%;padding:0;margin:0 0 20px;background:none;color:var(--facade-gold);font:italic 30px/1 Georgia,serif}
+#main.service-designed #process .sd-flow li>span::after {content:'';display:block;height:1px;background:#c8b78f;flex:1;width:auto;margin:0;opacity:.6}
+#main.service-designed #process .sd-flow li h3 {font-size:clamp(20px,1.35vw,24px);font-weight:500;line-height:1.7;letter-spacing:.01em;margin:0 0 16px}
+#main.service-designed #process .sd-flow li p {font-size:clamp(15px,.95vw,17px);line-height:2.1;color:#625e57;margin:0}
+
+/* Spacious disclosures with the existing blue Q / red A markers. */
+#main.service-designed #questions {display:grid;grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);gap:8%;background:#f7f6f2;border-top:0}
+#main.service-designed #questions .sd-heading {margin:0}
+#main.service-designed #questions details {margin:0;border:0;border-bottom:1px solid #d8d2c7;background:transparent}
+#main.service-designed #questions details:first-child {border-top:1px solid #b49b72}
+#main.service-designed #questions summary {padding:28px 0;gap:20px;font-size:clamp(16px,1.1vw,19px);font-weight:500;line-height:1.9}
+#main.service-designed #questions summary>span:first-child {color:#52758d;font-size:22px}
+#main.service-designed #questions .sd-answer {padding:0 42px 28px 0;gap:20px}
+#main.service-designed #questions .sd-answer>span {color:#ab6764;font-size:22px}
+#main.service-designed #questions .sd-answer p {font-size:clamp(15px,1vw,18px);line-height:2.1;color:#625e57}
+#main.service-designed #questions details[open] .sd-question {color:#6f5935}
+
+/* The shared consultation content retains its gold action button. */
+#main.service-designed .water-contact-banner {padding:80px var(--facade-inset) 96px;background:#fff}
+#main.service-designed .water-contact-banner::before {top:180px}
+#main.service-designed .water-contact-panel {max-width:1120px;border-radius:0;border-top:0;box-shadow:0 16px 55px #1e211d1a;padding:54px 48px}
+#main.service-designed .water-contact-en {font-size:clamp(46px,5vw,74px);letter-spacing:.07em}
+#main.service-designed .water-contact-action {background:#f7f6f2}
+#main.service-designed .sd-related {padding-block:64px 72px}
+#main.service-designed .sd-related .sd-heading {margin-bottom:30px}
+#main.service-designed .sd-related h2 {font-size:25px}
+#main.service-designed .sd-related .care-related {gap:24px}
+#main.service-designed .sd-related .care-related a {min-height:150px;font-size:clamp(17px,1.25vw,22px);padding:24px;border:0;border-bottom:2px solid #b49b72}
+
+@media(min-width:1900px){
+ #main.service-designed #scope .sd-service-item {min-height:400px}
+}
+@media(max-width:1100px){
+ #main.service-designed {--facade-inset:32px}
+ #main.service-designed .sd-section {padding-block:72px}
+ #main.service-designed .sd-anchor a:nth-child(n) {padding-left:18px;padding-right:32px;font-size:14px;min-height:86px}
+ #main.service-designed .sd-anchor a>span {right:14px}
+ #main.service-designed #approach>ol {gap:22px}
+ #main.service-designed #approach li:nth-child(n) .sd-approach-copy {width:calc(100% - 12px);margin-left:12px;padding:22px 8px 22px 16px}
+ #main.service-designed #approach li:nth-child(n) .sd-approach-copy h3 {font-size:21px;min-height:0}
+ #main.service-designed #process .sd-flow {grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 28px}
+ #main.service-designed #questions {grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:6%}
+}
+@media(min-width:761px) and (max-width:900px){
+ #main.service-designed #approach>ol {grid-template-columns:minmax(0,1fr);gap:32px}
+ #main.service-designed #approach li.sd-approach-row:nth-child(n) {display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:24px;align-items:center}
+ #main.service-designed #approach li:nth-child(n) .sd-approach-photo {grid-column:1;grid-row:1;aspect-ratio:4/3}
+ #main.service-designed #approach li:nth-child(n) .sd-approach-copy {grid-column:2;grid-row:1;width:100%;margin:0;padding:12px 0 20px}
+}
+@media(max-width:760px){
+ #main.service-designed {--facade-inset:24px}
+ #main.service-designed section[id] {scroll-margin-top:86px}
+ #main.service-designed .sd-section {padding:60px 24px}
+ #main.service-designed .sd-breadcrumb {padding:16px 26px;font-size:11px;gap:8px}
+ #main.service-designed .sd-anchor {grid-template-columns:repeat(2,minmax(0,1fr));margin:32px 24px 0}
+ #main.service-designed .sd-anchor a:nth-child(n) {min-height:66px;padding:18px 36px 18px 18px;border-right:1px solid #ffffff26;border-bottom:1px solid #ffffff26;grid-column:auto}
+ #main.service-designed .sd-anchor a:nth-child(even) {border-right:0}
+ #main.service-designed .sd-anchor a:last-child {grid-column:1/-1;border-bottom:0;border-right:0}
+ #main.service-designed .sd-heading .sd-chapter {font-size:30px;margin-bottom:18px!important;gap:20px}
+ #main.service-designed .sd-heading .sd-chapter::after {width:60px}
+ #main.service-designed .sd-heading h2,#main.service-designed #process .sd-process-heading h2 {font-size:28px}
+ #main.service-designed .sd-heading .sd-title-line {gap:14px 24px}
+ #main.service-designed .sd-heading .sd-section-lead {font-size:15px}
+ #main.service-designed #scope {padding:56px 24px 60px}
+ #main.service-designed #scope .sd-concern-list {grid-template-columns:1fr;gap:10px;margin-top:26px}
+ #main.service-designed #scope .sd-concern-list li {font-size:15px;min-height:76px;padding:18px;gap:15px}
+ #main.service-designed #scope .sd-editorial {grid-template-columns:minmax(0,1fr)}
+ #main.service-designed #scope .sd-scope-photo {width:100%;aspect-ratio:4/3}
+ #main.service-designed #scope .sd-carousel {margin-top:-24px;margin-left:20px;padding:0}
+ #main.service-designed #scope .sd-service-item {min-height:320px;padding:32px 26px}
+ #main.service-designed #scope .sd-service-copy h3 {font-size:24px}
+ #main.service-designed #scope .sd-service-copy>p {font-size:15px}
+ #main.service-designed #scope .sd-carousel-pagination {margin-top:12px}
+ #main.service-designed #approach {padding:56px 24px 60px}
+ #main.service-designed #approach>div>.sd-heading {margin-bottom:32px}
+ #main.service-designed #approach>ol {grid-template-columns:minmax(0,1fr);gap:36px}
+ #main.service-designed #approach li:nth-child(n) .sd-approach-photo {aspect-ratio:3/2}
+ #main.service-designed #approach li:nth-child(n) .sd-approach-copy {width:calc(100% - 20px);margin-left:20px;padding:22px 10px 22px 20px;gap:14px}
+ #main.service-designed #approach li:nth-child(n) .sd-approach-copy h3 {font-size:23px;min-height:0}
+ #main.service-designed #case-study {padding-block:56px 60px}
+ #main.service-designed .sd-case-heading {display:flex;align-items:flex-start;flex-direction:column;gap:18px;margin-bottom:28px}
+ #main.service-designed .sd-case-grid {grid-template-columns:minmax(0,1fr)}
+ #main.service-designed .sd-case-feature figure {width:100%;aspect-ratio:4/3}
+ #main.service-designed .sd-case-caption {padding-top:18px;gap:12px}
+ #main.service-designed .sd-case-caption h3 {font-size:16px}
+ #main.service-designed .sd-case-copy {margin:28px 0 0 20px;padding:32px 24px}
+ #main.service-designed .sd-case-copy h3 {font-size:25px}
+ #main.service-designed #process .sd-process-heading {gap:18px;margin-bottom:32px}
+ #main.service-designed #process .sd-process-heading>p {font-size:14px}
+ #main.service-designed #process .sd-flow {grid-template-columns:1fr;gap:30px}
+ #main.service-designed #process .sd-flow-photo {aspect-ratio:16/9}
+ #main.service-designed #process .sd-flow li h3 {font-size:23px}
+ #main.service-designed #questions {grid-template-columns:1fr;gap:32px}
+ #main.service-designed #questions summary {font-size:16px;gap:12px;padding:22px 0}
+ #main.service-designed #questions .sd-answer {gap:12px;padding-right:0}
+ #main.service-designed .water-contact-banner {padding:56px 20px 64px}
+ #main.service-designed .water-contact-banner::before {top:130px}
+ #main.service-designed .water-contact-panel {padding:36px 22px}
+ #main.service-designed .water-contact-en {font-size:43px}
+ #main.service-designed .sd-related {padding-block:48px}
+ #main.service-designed .sd-related h2 {font-size:23px}
+ #main.service-designed .sd-related .care-related {grid-template-columns:1fr;gap:16px}
+ #main.service-designed .sd-related .care-related a {min-height:110px;font-size:20px}
+}
+@media(prefers-reduced-motion:reduce){
+ #main.service-designed .sd-approach-photo img,#main.service-designed .sd-text-link span {transition:none;transform:none!important}
+}
+
+/* Match absolute WordPress URLs and relative exported preview URLs. */
+#main.service-designed .sd-related .care-related a[href$="/services/energy/"]{background-image:url('assets/services/solar.jpg');background-position:center 45%}
+#main.service-designed .sd-related .care-related a[href$="/services/cleaning/"]{background-image:url('assets/services/cleaning-tools.jpg');background-position:center 55%}
+#main.service-designed .sd-related .care-related a[href$="/services/water/"]{background-image:url('assets/services/bathroom.jpg');background-position:center 65%}
+#main.service-designed .sd-related .care-related a::before{background:linear-gradient(0deg,#171915b8,#17191510)}
+#main.service-designed .sd-related .care-related a:hover::before{background:linear-gradient(0deg,#171915cc,#17191535)}
+
+/* Restore the bottom-left hero title, without the decorative vertical rule. */
+#main.service-designed .sd-hero{display:flex;flex-direction:column;align-items:stretch;min-height:0;padding:0;gap:0}
+#main.service-designed .sd-hero-photo{order:-1;display:flex;align-items:flex-end;justify-content:flex-start;width:auto;height:clamp(360px,50svh,630px);min-height:0;margin:0 24px!important;overflow:hidden;clip-path:none;background:var(--facade-dark)}
+#main.service-designed .sd-hero-photo img{object-position:center 48%;opacity:1}
+#main.service-designed .sd-hero-photo::before{display:none;content:none}
+#main.service-designed .sd-hero-photo::after{background:linear-gradient(90deg,#151714aa,transparent 65%),linear-gradient(0deg,#14161266,transparent 50%)}
+#main.service-designed .sd-hero .sd-hero-photo h1{font-size:clamp(44px,5.2vw,82px);font-weight:500;line-height:1.3;letter-spacing:.13em;text-align:left;margin:0;padding:0 6vw 60px;white-space:normal}
+@media(min-width:1900px){
+ #main.service-designed .sd-hero-photo{margin-inline:48px!important;height:630px}
+}
+@media(max-width:1100px){
+ #main.service-designed .sd-hero-photo{margin-inline:16px!important;height:396px}
+}
+@media(max-width:760px){
+ #main.service-designed .sd-hero-photo{height:360px;margin:0 12px!important}
+ #main.service-designed .sd-hero-photo img{object-position:60% center}
+ #main.service-designed .sd-hero .sd-hero-photo h1{font-size:38px;letter-spacing:.08em;padding:0 34px 40px}
+}
+
+/* A single restrained band for the three consultation prompts. */
+#main.service-designed #scope .sd-concern-list{gap:0;border-top:1px solid #c9b994;border-bottom:1px solid #ded9cf;padding:26px 0;margin-top:32px}
+#main.service-designed #scope .sd-concern-list li{min-height:58px;padding:10px 30px;gap:20px;background:transparent;border:0;border-right:1px solid #ded9cf;box-shadow:none;transform:none;font-size:clamp(16px,1.1vw,20px);letter-spacing:.035em}
+#main.service-designed #scope .sd-concern-list li:first-child{padding-left:12px}
+#main.service-designed #scope .sd-concern-list li:last-child{border-right:0}
+#main.service-designed #scope .sd-concern-list li::after{display:none}
+#main.service-designed #scope .sd-concern-icon{width:22px;height:22px;flex-basis:22px;border:0;border-radius:0;background:transparent;color:#aa8b50;font-size:18px}
+@media(max-width:760px){
+ #main.service-designed #scope .sd-concern-list{padding:4px 0;margin-top:24px}
+ #main.service-designed #scope .sd-concern-list li:nth-child(n){min-height:76px;padding:18px 8px;gap:16px;border-right:0;border-bottom:1px solid #e8e4dc;font-size:15px}
+ #main.service-designed #scope .sd-concern-list li:last-child{border-bottom:0}
+}
+
+/* A small gold square sits behind the carousel's upper-right corner. */
+#main.service-designed #scope .sd-carousel::before{content:'';position:absolute;top:4px;right:-26px;width:72px;height:72px;background:#c5a45f;z-index:-1;pointer-events:none}
+@media(max-width:760px){
+ #main.service-designed #scope .sd-carousel::before{top:-18px;right:-18px;width:52px;height:52px}
+}
+
+/* Reverse the image study and echo the scope card's gold corner. */
+#main.service-designed .sd-case-grid{grid-template-columns:minmax(0,.9fr) minmax(0,1.25fr)}
+#main.service-designed .sd-case-feature{grid-column:2;grid-row:1}
+#main.service-designed .sd-case-feature figure{margin-left:-36px;width:calc(100% + 36px)}
+#main.service-designed .sd-case-copy{grid-column:1;grid-row:1;border-top:0;isolation:isolate}
+#main.service-designed .sd-case-copy::before{content:'';position:absolute;top:-26px;left:-26px;width:72px;height:72px;background:#c5a45f;z-index:-2;pointer-events:none}
+#main.service-designed .sd-case-copy::after{content:'';position:absolute;inset:0;background:var(--facade-dark);z-index:-1;pointer-events:none}
+@media(max-width:760px){
+ #main.service-designed .sd-case-grid{grid-template-columns:minmax(0,1fr)}
+ #main.service-designed .sd-case-feature{grid-column:1;grid-row:1}
+ #main.service-designed .sd-case-feature figure{margin-left:0;width:100%}
+ #main.service-designed .sd-case-copy{grid-column:1;grid-row:2}
+ #main.service-designed .sd-case-copy::before{top:-18px;left:-18px;width:52px;height:52px}
+}
+
+/* Keep the case-study link aligned after removing the section title. */
+#main.service-designed .sd-case-heading{justify-content:flex-end}
+
+/* Shared primitives previously provided by facade-only legacy rules. */
+#main.service-designed #scope .sd-concern-list li::before{display:none}
+#main.service-designed #scope .sd-concern-icon{display:grid;place-items:center;flex-shrink:0;font-style:normal}
+#main.service-designed #scope .sd-index,#main.service-designed .sd-concern-number{display:none}
+#main.service-designed #scope .sd-service-copy .sd-category{color:#c5a45f;font-size:14px;margin-bottom:12px}
+#main.service-designed #scope .sd-service-copy small{display:block;color:#d1cdc4;font-size:13px;line-height:1.8;margin-top:18px}
+#main.service-designed .sd-related .care-related a[href$="/services/facade/"]{background-image:url('assets/services/exterior.jpg');background-position:center}
+#main.service-designed.service-water .sd-anchor{grid-template-columns:repeat(4,minmax(0,1fr))}
+#main.service-designed.service-water #process .sd-flow{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:760px){
+ #main.service-designed.service-water .sd-anchor{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #main.service-designed.service-water .sd-anchor a:last-child{grid-column:auto}
+ #main.service-designed.service-water #process .sd-flow{grid-template-columns:minmax(0,1fr)}
+}
+
+#main.service-designed #approach>div{padding-inline:0;width:100%;max-width:none}
+#main.service-designed #approach li:nth-child(n) .sd-approach-copy{flex-direction:column;min-width:0;min-height:0;isolation:auto}
+#main.service-designed #approach li:nth-child(n) .sd-approach-number{position:static;z-index:auto;flex:none}
+#main.service-designed #approach li:nth-child(n) .sd-approach-copy :is(h3,p){width:100%;max-width:none;box-sizing:border-box;overflow-wrap:anywhere}

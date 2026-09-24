@@ -60,7 +60,7 @@ body.admin-bar .care-header{top:32px}.ns-article{max-width:1040px;margin:0 auto;
 .residential .home-about-copy h2{font-family:'Yu Mincho','Hiragino Mincho ProN',Georgia,serif;font-weight:500;font-size:clamp(25px,2.3vw,42px);line-height:1.85;letter-spacing:.025em;margin:0 0 28px;color:#fff;word-break:normal;overflow-wrap:anywhere}
 .home-about-description{font-size:14px;line-height:2.2;color:#e3e0d9;margin:0 0 34px}
 .home-about-copy .care-button{min-width:260px;max-width:100%;border:1px solid #c1a56d;color:#ead5ad;background:transparent;justify-content:space-between;gap:32px;padding:17px 24px;transition:color .3s,background .3s}
-.home-about-copy .care-button:hover{background:#c1a56d;color:#242422}
+.home-about-copy .care-button:is(:hover,:focus-visible){background:#c1a56d;color:#fff}
 @media(max-width:1000px){.home-about-feature{grid-template-columns:48% 52%}.home-about-photo{min-height:510px}.home-about-copy{padding:54px 32px}.residential .home-about-copy h2{font-size:27px}}
 @media(max-width:700px){.home-about-feature{grid-template-columns:1fr;margin-top:36px}.home-about-photo{min-height:0;aspect-ratio:1.4}.home-about-photo img{object-position:center}.home-about-copy{padding:38px 24px 46px}.home-about-copy .care-eyebrow{margin-bottom:21px;font-size:10px}.residential .home-about-copy h2{font-size:clamp(23px,6.25vw,32px);line-height:1.8;margin-bottom:22px;letter-spacing:.01em}.home-about-description{font-size:13px;margin-bottom:28px}.home-about-copy .care-button{min-width:0;width:100%}}
 .home-works>.ns-empty,.works-list>.ns-empty{text-align:center;width:100%;margin-inline:auto}
@@ -71,11 +71,11 @@ body.admin-bar .care-header{top:32px}.ns-article{max-width:1040px;margin:0 auto;
 @media(max-width:360px){.care-home .home-reform .home-section-heading h2,.care-home .home-works .home-section-heading h2{font-size:23px}}
 
 /* Match the About link's outlined shape, with contrast for the light surface. */
-.care-home .home-section-heading>a.home-view-all{box-sizing:border-box;min-width:160px;max-width:100%;min-height:44px;border:1px solid #c1a56d;color:#343832;background:transparent;justify-content:space-between;gap:24px;padding:10px 16px;font-size:13px;line-height:1.5;transition:color .3s,background .3s}
-.care-home .home-section-heading>a.home-view-all span{color:inherit;font-size:19px;line-height:1}
-.care-home .home-section-heading>a.home-view-all:hover,.care-home .home-section-heading>a.home-view-all:focus-visible{background:#c1a56d;color:#242422}
+.care-home .home-section-heading>a.home-view-all{box-sizing:border-box;min-width:220px;max-width:100%;min-height:60px;border:1px solid #aa8b50;color:#343832;background:transparent;justify-content:space-between;gap:32px;padding:16px 24px;font-size:16px;font-weight:500;line-height:1.5;transition:color .3s,background .3s}
+.care-home .home-section-heading>a.home-view-all span{color:inherit;font-size:26px;line-height:1}
+.care-home .home-section-heading>a.home-view-all:hover,.care-home .home-section-heading>a.home-view-all:focus-visible{background:#c1a56d;color:#fff}
 @media(max-width:1100px){.care-home .home-section-heading{flex-wrap:wrap}.home-section-heading>p{order:3;width:100%}}
-@media(max-width:700px){.care-home .home-section-heading>a.home-view-all{min-width:118px;width:auto;min-height:40px;margin:0 0 0 auto;padding:9px 12px;gap:14px;font-size:12px}.care-home .home-section-heading{align-items:center}}
+@media(max-width:700px){.care-home .home-section-heading>a.home-view-all{min-width:142px;width:auto;min-height:48px;margin:0 0 0 auto;padding:12px 16px;gap:18px;font-size:14px}.care-home .home-section-heading{align-items:center}}
 
 /* A gentle photographic fade; titles and links stay readable throughout. */
 @media(prefers-reduced-motion:no-preference){
@@ -88,9 +88,127 @@ body.admin-bar .care-header{top:32px}.ns-article{max-width:1040px;margin:0 auto;
 }
 @media print{.care-home .home-reform .care-service-photo{opacity:1!important;transform:none!important;animation:none!important}}
 
-/* Present the desktop first view as a full-screen visual. */
+/* Desktop balance: hero occupies about two thirds of the first screen. */
 @media(min-width:1001px){
- .care-home .care-hero{height:100svh;overflow:hidden}
+ .care-home .care-hero{height:63svh;overflow:hidden}
  .care-home .care-hero picture{display:block;height:100%}
  .care-home .care-hero img{width:100%;height:100%;object-fit:cover;object-position:left bottom}
+}
+
+@media(min-width:1001px){
+ .care-home .home-reform{padding:clamp(20px,2.5svh,36px) 3% 24px}
+ .care-home .home-reform .care-service-photo{height:clamp(150px,22svh,340px);aspect-ratio:auto}
+ .care-home .home-hero-subtitle{font-size:clamp(12px,.85vw,20px)}
+}
+
+/* Desktop footer navigation matches the header text size. */
+@media(min-width:1001px){
+ .residential footer.care-footer .footer-nav{gap:18px clamp(26px,2.2vw,56px);align-items:center}
+ .residential footer.care-footer .footer-nav>a{font-size:14px;font-weight:400;line-height:1.8;letter-spacing:.035em;padding-block:8px;color:#fff}
+ .residential footer.care-footer .footer-nav>a::after{bottom:3px}
+ .residential footer.care-footer .footer-bottom>a{font-size:14px;line-height:1.8;padding-block:6px}
+}
+
+/* Emphasize the home page navigation buttons. */
+.care-home .home-section-heading>a.home-view-all,
+.care-home .home-about-copy .care-button{font-weight:700}
+
+/* Give the home contact section more separation on desktop. */
+@media(min-width:1001px){
+ .care-home .home-about-feature + .water-contact-banner{margin-top:60px}
+}
+
+/* Emphasize the header consultation link with a warm rounded button. */
+.residential .care-header .care-contact{
+ background:#c5a45f;border:1px solid #c5a45f;border-radius:999px;
+ color:#fff;font-weight:700;justify-content:center;letter-spacing:.05em;
+ transition:background-color .25s,border-color .25s,color .25s;
+}
+.residential .care-header .care-contact:is(:hover,:focus-visible){
+ background:#a78949;border-color:#a78949;color:#fff;
+}
+.residential .care-header .care-contact>span{display:none}
+.residential .care-header .care-contact{min-height:50px;padding:13px 28px;line-height:1.5}
+@media(min-width:1001px){
+ .residential .care-header .care-contact{min-width:190px;font-size:16px}
+}
+@media(max-width:700px){
+ .residential .care-header .care-contact{min-height:44px;padding:10px 16px;font-size:12px}
+}
+
+/* Service destinations in the shared header and footer. */
+.residential .care-header .reform-nav{position:relative}
+.residential .care-header .reform-nav-trigger{display:flex;align-items:center;gap:6px}
+.residential .care-header .reform-nav-toggle{display:grid;place-items:center;width:28px;height:40px;padding:0;border:0;background:transparent;color:inherit;cursor:pointer;font-size:18px}
+.residential .care-header .reform-subnav{display:none;position:absolute;top:100%;left:-24px;min-width:260px;padding:16px 24px;background:#292a27;color:#fff;box-shadow:0 16px 40px #0002;border-top:2px solid #c5a45f}
+.residential .care-header .reform-nav.is-open .reform-subnav{display:grid}
+.residential .care-header .reform-subnav a{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:16px 0;font-size:14px;line-height:1.6;color:#fff;border-bottom:1px solid #ffffff20}
+.residential .care-header .reform-subnav a:last-child{border-bottom:0}
+.residential .care-header .reform-subnav a>span{color:#c5a45f}
+.residential .care-header .reform-subnav a:hover{color:#dfc68e}
+.residential footer.care-footer .footer-services{grid-column:2;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:-24px;padding-top:26px;border-top:1px solid #ffffff26}
+.residential footer.care-footer .footer-services a{display:flex;justify-content:space-between;gap:12px;font-size:14px;font-weight:400;line-height:1.8;color:#fff;position:relative;width:fit-content}
+.residential footer.care-footer .footer-services a>span{color:#c5a45f}
+.residential footer.care-footer .footer-services a:after{content:'';position:absolute;left:0;bottom:-5px;width:0;height:1px;background:#fff;transition:width .25s}
+.residential footer.care-footer .footer-services a:is(:hover,:focus-visible):after{width:100%}
+@media(max-width:1120px){
+ .residential .care-header .reform-nav-trigger>a{flex:1}
+ .residential .care-header .reform-nav-toggle{display:none}
+ .residential .care-header .reform-subnav{position:static;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));min-width:0;padding:8px 16px;background:#eeece5;color:#343832;box-shadow:none;border:0;gap:0 24px}
+ .residential .care-header .reform-subnav a{font-size:14px;color:#343832;border-color:#d7d3c9;padding:16px 0}
+ .residential footer.care-footer .footer-services{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:700px){
+ .residential footer.care-footer .footer-services{grid-column:1;margin-top:0;gap:22px 24px}
+ .residential .care-header .reform-subnav{gap:0 14px;padding-inline:12px}
+ .residential .care-header .reform-subnav a{font-size:13px;gap:8px}
+}
+
+/* A quiet, neutral dropdown beneath the reform navigation. */
+.residential .care-header .reform-subnav{background:#f7f6f2;color:#343832;border:0;box-shadow:0 10px 24px #0000000d}
+.residential .care-header .reform-subnav a{color:#343832;border:0}
+.residential .care-header .reform-subnav a>span{color:#84847b}
+.residential .care-header .reform-subnav a:hover{color:#343832}
+@media(max-width:1120px){
+ .residential .care-header .reform-subnav{background:transparent;box-shadow:none}
+}
+
+/* Footer hierarchy: service children sit beneath their parent destination. */
+.residential footer.care-footer .footer-nav.footer-columns{display:grid;grid-template-columns:1.15fr .75fr 1.15fr;align-items:start;gap:clamp(24px,3vw,56px)}
+.residential footer.care-footer .footer-column{min-width:0;display:flex;flex-direction:column;align-items:flex-start}
+.residential footer.care-footer .footer-column a{position:relative;display:inline-block;font-size:14px;font-weight:400;line-height:1.8;letter-spacing:.035em;color:#fff;padding:8px 0;width:fit-content}
+.residential footer.care-footer .footer-service-list{display:flex;flex-direction:column;gap:4px;list-style:none;margin:16px 0 0;padding:0}
+.residential footer.care-footer .footer-service-list a{color:#d8d6cf}
+.residential footer.care-footer .footer-consultation{margin-top:16px}
+.residential footer.care-footer .footer-column a:after{content:'';position:absolute;left:0;bottom:3px;width:0;height:1px;background:#fff;transition:width .25s}
+.residential footer.care-footer .footer-column a:is(:hover,:focus-visible):after{width:100%}
+@media(max-width:900px){
+ .residential footer.care-footer{grid-template-columns:1fr}
+ .residential footer.care-footer .footer-nav.footer-columns{grid-column:1;gap:24px}
+}
+@media(max-width:480px){
+ .residential footer.care-footer .footer-nav.footer-columns{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 18px}
+ .residential footer.care-footer .footer-column:first-child{grid-row:1/3}
+ .residential footer.care-footer .footer-column a{font-size:13px;letter-spacing:0}
+}
+@media(prefers-reduced-motion:reduce){.residential footer.care-footer .footer-column a:after{transition:none}}
+
+/* Two balanced navigation columns, with aligned parent and child rows. */
+.residential footer.care-footer .footer-nav.footer-columns{grid-template-columns:repeat(2,minmax(0,1fr));width:100%;max-width:560px;justify-self:end;gap:clamp(28px,5vw,80px)}
+.residential footer.care-footer .footer-general{gap:4px}
+.residential footer.care-footer .footer-general>a:first-child{margin-bottom:12px}
+@media(max-width:900px){
+ .residential footer.care-footer .footer-nav.footer-columns{justify-self:start;max-width:560px}
+}
+@media(max-width:480px){
+ .residential footer.care-footer .footer-nav.footer-columns{gap:24px}
+ .residential footer.care-footer .footer-column:first-child{grid-row:auto}
+}
+
+/* Privacy hero follows the other fixed-page photographic headings. */
+.residential .privacy-page .photo-heading h1{font-family:'Yu Mincho','Hiragino Mincho ProN',Georgia,serif;font-weight:500}
+.residential .privacy-page .photo-heading-copy>p{font-family:Georgia,'Times New Roman',serif;font-size:18px;font-weight:400;letter-spacing:.08em;color:#fff}
+@media(max-width:700px){
+ .residential .privacy-page .photo-heading h1{font-size:clamp(22px,6.2vw,34px);letter-spacing:.02em}
+ .residential .privacy-page .photo-heading-copy>p{font-size:16px}
 }
