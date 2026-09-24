@@ -1,0 +1,89 @@
+body.admin-bar .care-header{top:32px}.ns-article{max-width:1040px;margin:0 auto;padding:160px 28px 100px}.ns-article h1{font-size:clamp(28px,4vw,48px);margin:24px 0;line-height:1.6}.ns-article-cover{width:100%;height:auto;margin:40px 0}.ns-article-content{line-height:2.1;margin:40px 0}.ns-article-content p{margin:1.5em 0}.ns-gallery{display:grid;grid-template-columns:1fr 1fr;gap:24px}.ns-gallery img{width:100%;height:auto}.ns-empty{padding:40px 0;color:#555}.ns-news-list article{padding:24px 0;border-bottom:1px solid #d3c8b4}.ns-contact-result{padding:24px;border:1px solid #9c7a3c;margin:24px 0}.ns-contact-form .ns-hp{position:absolute;left:-9999px}.ns-contact-form .field{margin:24px 0}.ns-contact-form label{display:block;margin-bottom:8px}.ns-contact-form input:not([type=checkbox]),.ns-contact-form select,.ns-contact-form textarea{width:100%;padding:14px;background:#fff;border:1px solid #ccc;font:inherit}.ns-contact-form button{padding:18px 40px;background:#252525;color:#fff;border:0;cursor:pointer}.ns-contact-form button:focus-visible{outline:3px solid #ac853f;outline-offset:4px}.ns-contact-form .consent{display:flex;gap:10px;align-items:center}@media(max-width:782px){body.admin-bar .care-header{top:46px}}@media(max-width:600px){.ns-gallery{grid-template-columns:1fr}}
+/* Clip the hero photo's entrance animation within its own frame. */
+.service-refined .sd-hero-photo{overflow:hidden}
+/* Service-specific TOP photos: retain the subject without the old hero-image zoom. */
+.home-reform .care-service-photo img{object-position:center;transform:scale(1)}
+.home-reform .care-service-photo.cleaning img{object-position:50% 50%}
+.home-reform .care-service-photo.water img{object-position:50% 65%}
+.home-reform .care-service:hover .care-service-photo img{transform:scale(1.04)}
+.care-home .care-hero{position:relative}
+.care-home .home-hero-subtitle{position:absolute;left:3.9%;bottom:2.6%;margin:0;color:#fff;font-family:var(--sans);font-size:clamp(12px,1.17vw,28px);font-weight:400;line-height:1.5;letter-spacing:.08em;text-shadow:0 1px 6px #0006}
+@media(max-width:700px){.care-home .home-hero-subtitle{left:4.2%;bottom:3.4%;font-size:clamp(10px,2.95vw,21px);letter-spacing:.06em}}
+/* Restore the previous two-tone Newspace wordmark. */
+.care-logo{display:inline-flex;flex-direction:column;width:fit-content}
+.care-logo .logo-word{display:block;font:600 40px/.95 Georgia,'Times New Roman',serif;letter-spacing:-1.8px;margin:0;color:inherit}
+.care-logo .logo-initial{display:inline;font:inherit;letter-spacing:inherit;margin:0;color:#c5a45f}
+.care-logo small{display:block;font:10px/1 Arial,'Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif;letter-spacing:.29em;margin-top:11px;text-align:center;color:inherit}
+@media(max-width:1000px){.care-logo .logo-word{font-size:33px}}
+@media(max-width:700px){.care-logo .logo-word{font-size:28px}.care-logo small{font-size:8px;margin-top:8px;letter-spacing:.23em}}
+/* Match the Works page's full-width photographic first view. */
+.services-index .reform-photo-heading{padding:0;color:#fff;background:#232522}
+.services-index .reform-photo-heading h1{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:.02em;line-height:1.05;margin:0 0 22px}
+.services-index .reform-photo-heading .chapter{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.16em;line-height:1.9;margin:0 0 26px;color:var(--gold-light)}
+.services-index .reform-photo-heading .photo-heading-copy>p:last-child{font-family:var(--sans);font-size:16px;font-weight:600;line-height:1.9;color:#fff;margin:0}
+@media(max-width:760px){.services-index .reform-photo-heading .chapter{font-size:11px}.services-index .reform-photo-heading .photo-heading-copy>p:last-child{font-size:14px}}
+/* Give the photographic first view a more restrained title scale. */
+.residential .photo-heading h1{font-size:clamp(36px,4vw,56px);line-height:1.4;margin-bottom:14px}
+.services-index .reform-photo-heading h1{font-family:'Yu Mincho','Hiragino Mincho ProN',Georgia,serif;font-size:clamp(36px,4vw,56px);font-weight:500;line-height:1.4;letter-spacing:.05em;margin-bottom:14px}
+@media(max-width:700px){.residential .photo-heading h1,.services-index .reform-photo-heading h1{font-size:clamp(27px,7.4vw,34px);line-height:1.45;margin-bottom:12px}}
+/* Japanese page title with a quieter English subtitle. */
+.residential :is(.services-index,.works-index,.contact-page) .photo-heading h1{font-family:'Yu Mincho','Hiragino Mincho ProN',Georgia,serif;font-weight:500}
+.residential :is(.services-index,.works-index,.contact-page) .photo-heading .photo-heading-copy>p:last-child{font-family:Georgia,'Times New Roman',serif;font-size:18px;font-weight:400;letter-spacing:.08em}
+@media(max-width:700px){.services-index .reform-photo-heading h1{letter-spacing:.02em}.residential :is(.services-index,.works-index,.contact-page) .photo-heading .photo-heading-copy>p:last-child{font-size:16px}}
+/* Keep the footer wordmark's hover color unified. */
+.residential footer.care-footer .care-logo .logo-initial{color:#c5a45f}
+.residential footer.care-footer .care-logo,
+.residential footer.care-footer .care-logo span,
+.residential footer.care-footer .care-logo small{transition:color .3s ease}
+.residential footer.care-footer .care-logo:is(:hover,:focus-visible),
+.residential footer.care-footer .care-logo:is(:hover,:focus-visible) span,
+.residential footer.care-footer .care-logo:is(:hover,:focus-visible) small{color:#e0c998}
+/* Match the header navigation's underline, in white on the dark footer. */
+.residential footer.care-footer :is(.footer-nav,.footer-bottom)>a{position:relative;display:inline-block;color:#fff}
+.residential footer.care-footer :is(.footer-nav,.footer-bottom)>a::after{content:'';position:absolute;left:0;bottom:-5px;width:0;height:1px;background:#fff;pointer-events:none;transition:width .25s ease}
+.residential footer.care-footer :is(.footer-nav,.footer-bottom)>a:is(:hover,:focus-visible){color:#fff}
+.residential footer.care-footer :is(.footer-nav,.footer-bottom)>a:is(:hover,:focus-visible)::after{width:100%}
+@media(prefers-reduced-motion:reduce){.residential footer.care-footer :is(.footer-nav,.footer-bottom)>a::after{transition:none}}
+/* Extend the arrow toward the upper right without a filled hover tile. */
+.services-index .reform-card .reform-arrow,
+.services-index .reform-card:is(:hover,:focus-visible) .reform-arrow{background:transparent;color:#343832}
+.services-index .reform-arrow svg{display:block;width:30px;height:30px;overflow:visible;transform-origin:19% 81%;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+.services-index .reform-card:is(:hover,:focus-visible) .reform-arrow svg{transform:translate(2px,-2px) scale(1.17)}
+@media(prefers-reduced-motion:reduce){.services-index .reform-arrow svg{transition:none}.services-index .reform-card:is(:hover,:focus-visible) .reform-arrow svg{transform:none}}
+/* An architectural photograph anchors the home About section. */
+.home-about-feature{display:grid;grid-template-columns:54% 46%;margin:64px 0 0;background:#272725;color:#fff;isolation:isolate}
+.home-about-photo{position:relative;margin:0;min-height:560px;overflow:hidden}
+.home-about-photo img{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:59% center}
+.home-about-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:76px clamp(32px,4.5vw,88px)}
+.home-about-copy .care-eyebrow{color:#d5b87f;letter-spacing:.2em;margin:0 0 30px;display:flex;align-items:center;gap:20px}
+.home-about-copy .care-eyebrow:before{content:'';width:36px;height:1px;background:currentColor}
+.residential .home-about-copy h2{font-family:'Yu Mincho','Hiragino Mincho ProN',Georgia,serif;font-weight:500;font-size:clamp(25px,2.3vw,42px);line-height:1.85;letter-spacing:.025em;margin:0 0 28px;color:#fff;word-break:normal;overflow-wrap:anywhere}
+.home-about-description{font-size:14px;line-height:2.2;color:#e3e0d9;margin:0 0 34px}
+.home-about-copy .care-button{min-width:260px;max-width:100%;border:1px solid #c1a56d;color:#ead5ad;background:transparent;justify-content:space-between;gap:32px;padding:17px 24px;transition:color .3s,background .3s}
+.home-about-copy .care-button:hover{background:#c1a56d;color:#242422}
+@media(max-width:1000px){.home-about-feature{grid-template-columns:48% 52%}.home-about-photo{min-height:510px}.home-about-copy{padding:54px 32px}.residential .home-about-copy h2{font-size:27px}}
+@media(max-width:700px){.home-about-feature{grid-template-columns:1fr;margin-top:36px}.home-about-photo{min-height:0;aspect-ratio:1.4}.home-about-photo img{object-position:center}.home-about-copy{padding:38px 24px 46px}.home-about-copy .care-eyebrow{margin-bottom:21px;font-size:10px}.residential .home-about-copy h2{font-size:clamp(23px,6.25vw,32px);line-height:1.8;margin-bottom:22px;letter-spacing:.01em}.home-about-description{font-size:13px;margin-bottom:28px}.home-about-copy .care-button{min-width:0;width:100%}}
+.home-works>.ns-empty,.works-list>.ns-empty{text-align:center;width:100%;margin-inline:auto}
+/* Match the home About heading's Japanese serif typography. */
+.care-home .home-reform .home-section-heading h2,
+.care-home .home-works .home-section-heading h2{font-family:'Yu Mincho','Hiragino Mincho ProN',Georgia,serif;font-weight:500;font-size:clamp(28px,2.4vw,35px);letter-spacing:.025em;line-height:1.5}
+@media(max-width:700px){.care-home .home-reform .home-section-heading h2,.care-home .home-works .home-section-heading h2{font-size:25px;letter-spacing:.01em}}
+@media(max-width:360px){.care-home .home-reform .home-section-heading h2,.care-home .home-works .home-section-heading h2{font-size:23px}}
+
+/* Match the About link's outlined shape, with contrast for the light surface. */
+.care-home .home-section-heading>a.home-view-all{box-sizing:border-box;min-width:160px;max-width:100%;min-height:44px;border:1px solid #c1a56d;color:#343832;background:transparent;justify-content:space-between;gap:24px;padding:10px 16px;font-size:13px;line-height:1.5;transition:color .3s,background .3s}
+.care-home .home-section-heading>a.home-view-all span{color:inherit;font-size:19px;line-height:1}
+.care-home .home-section-heading>a.home-view-all:hover,.care-home .home-section-heading>a.home-view-all:focus-visible{background:#c1a56d;color:#242422}
+@media(max-width:1100px){.care-home .home-section-heading{flex-wrap:wrap}.home-section-heading>p{order:3;width:100%}}
+@media(max-width:700px){.care-home .home-section-heading>a.home-view-all{min-width:118px;width:auto;min-height:40px;margin:0 0 0 auto;padding:9px 12px;gap:14px;font-size:12px}.care-home .home-section-heading{align-items:center}}
+
+/* A gentle photographic fade; titles and links stay readable throughout. */
+@media(prefers-reduced-motion:no-preference){
+ .care-home .home-reform .reform-photo-waiting{opacity:0}
+ .care-home .home-reform .reform-photo-entering{animation:reform-photo-fade 1.5s ease-in-out var(--photo-enter-delay,0ms) both}
+}
+@keyframes reform-photo-fade{
+ from{opacity:0}
+ to{opacity:1}
+}
+@media print{.care-home .home-reform .care-service-photo{opacity:1!important;transform:none!important;animation:none!important}}

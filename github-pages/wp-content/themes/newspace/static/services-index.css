@@ -1,0 +1,78 @@
+.services-index{background:#fff;--sd-gutter:clamp(24px,6vw,110px)}
+.services-index .reform-hero{display:grid;grid-template-columns:43% 57%;background:#262625;color:#fff;min-height:490px}
+.services-index .reform-hero-copy{padding:65px 35px 65px var(--sd-gutter);display:flex;flex-direction:column;justify-content:center;align-items:start}
+.reform-rule{width:45px;height:2px;background:#bca16c;margin-bottom:35px}
+.services-index .reform-hero h1{font-size:clamp(32px,3vw,48px);line-height:1.7;letter-spacing:.045em;margin:0 0 26px}
+.services-index .reform-hero p{font-family:var(--sd-serif);font-size:20px;line-height:2.1;color:#e3ded5}
+.reform-hero-copy>a{display:flex;gap:40px;border-bottom:1px solid #bca16c;padding:12px 0;margin-top:32px;font-size:14px;color:#ddc79c}
+.services-index .reform-hero figure{min-height:490px}
+.services-index .reform-hero img{height:100%;object-fit:cover}
+.reform-options{padding:105px var(--sd-gutter) 95px;scroll-margin-top:120px}
+.reform-section-heading{display:flex;align-items:center;gap:30px;margin-bottom:60px}
+.reform-section-heading>span{font:italic 400 78px/1 Georgia,serif;color:#a3864f}
+.services-index .reform-section-heading h2{font-size:clamp(28px,2.7vw,40px);margin:0}
+.reform-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:70px 50px}
+.reform-card{display:block;min-width:0;color:#272727}
+.reform-card:nth-child(even){transform:translateY(55px)}
+.reform-card-photo{aspect-ratio:1.55;overflow:hidden;background:#eee}
+.reform-card-photo img{transition:transform .7s}
+.reform-card:hover img{transform:scale(1.035)}
+.reform-card-heading{display:flex;align-items:center;gap:20px;margin-top:24px}
+.reform-number{font:italic 30px Georgia,serif;color:#a3864f}
+.services-index .reform-card-heading h2{font-size:clamp(24px,2.4vw,33px);line-height:1.6}
+.reform-arrow{margin-left:auto;width:46px;height:46px;display:grid;place-items:center;border:1px solid #bba477;border-radius:50%;font-size:23px;transition:background .4s,color .4s}
+.reform-card:hover .reform-arrow{background:#282828;color:#fff}
+.services-index .reform-card>p{font-size:15px;line-height:2;margin-top:14px;padding-bottom:22px;border-bottom:1px solid #d8d0c1;color:#514c44}
+.reform-note{font-size:12px;color:#69645b;margin-top:95px!important;line-height:1.8}
+.reform-flow{padding:85px var(--sd-gutter);background:#efede8}
+.services-index .care-flow{margin:0;gap:40px;list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.services-index .care-flow li{padding:25px 0 0;border-top:1px solid #bfa779}
+.services-index .care-flow li>span{color:#9a7a42;font:400 26px Georgia,serif}
+.services-index .care-flow h3{font-size:23px;margin:20px 0 14px}
+.services-index .care-flow p{font-size:15px;color:#514c44;line-height:2}
+@media(max-width:760px){
+ .services-index .reform-hero{display:flex;flex-direction:column;min-height:0}
+ .services-index .reform-hero figure{order:-1;min-height:0;height:260px}
+ .services-index .reform-hero-copy{padding:38px 24px 42px}
+ .reform-rule{margin-bottom:22px}.services-index .reform-hero h1{font-size:33px;margin-bottom:16px}.services-index .reform-hero p{font-size:18px}.reform-hero-copy>a{margin-top:22px}
+ .reform-options{padding:65px 24px}.reform-section-heading{gap:20px;margin-bottom:35px}.reform-section-heading>span{font-size:58px}.services-index .reform-section-heading h2{font-size:26px}
+ .reform-grid{grid-template-columns:1fr;gap:35px}.reform-card:nth-child(even){transform:none}.reform-card-heading{gap:15px;margin-top:18px}.services-index .reform-card-heading h2{font-size:26px}.reform-card-photo{aspect-ratio:1.45}.reform-note{margin-top:30px!important}
+ .reform-flow{padding:60px 24px}.services-index .care-flow{grid-template-columns:1fr;gap:25px}.services-index .care-flow h3{margin-top:12px}
+}
+@media(prefers-reduced-motion:reduce){.reform-card:hover img{transform:none}}
+
+/* Alternating service stories, one card per row. */
+.services-index .reform-grid{display:flex;flex-direction:column;gap:70px}
+.services-index .reform-card{width:64%;align-self:flex-start}
+.services-index .reform-card:nth-child(even){align-self:flex-end;transform:none}
+.services-index .reform-note{margin-top:45px!important}
+@media(max-width:760px){
+ .services-index .reform-grid{gap:45px}
+ .services-index .reform-card{width:94%}
+ .services-index .reform-card-heading{gap:10px}
+ .services-index .reform-card-heading h2{font-size:24px}
+ .services-index .reform-arrow{width:38px;height:38px;flex-shrink:0}
+}
+
+/* Compact architectural composition: measured images and staggered columns. */
+.services-index .reform-options{max-width:1340px;margin-inline:auto;padding-top:80px;padding-bottom:80px}
+.services-index .reform-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 7%;padding-bottom:90px;align-items:start}
+.services-index .reform-card{width:100%;align-self:start;position:relative;min-width:0}
+.services-index .reform-card:nth-child(even){align-self:start;transform:translateY(90px)}
+.services-index .reform-card-photo{aspect-ratio:1.85;border-left:1px solid #bba477;padding-left:10px;background:transparent}
+.services-index .reform-card-photo img{object-fit:cover}
+.services-index .reform-card-heading{margin-top:20px;gap:16px}
+.services-index .reform-card-heading h2{font-size:clamp(23px,2vw,29px)}
+.services-index .reform-number{font-size:25px}
+.services-index .reform-arrow{border-radius:0;width:36px;height:36px;border:0;font-size:24px}
+.services-index .reform-card>p{margin-top:9px;padding-bottom:18px;font-size:14px}
+@media(max-width:760px){
+ .services-index .reform-options{padding-top:55px;padding-bottom:55px}
+ .services-index .reform-grid{display:flex;gap:34px;padding-bottom:0}
+ .services-index .reform-card{width:91%;align-self:flex-start}
+ .services-index .reform-card:nth-child(even){align-self:flex-end;transform:none}
+ .services-index .reform-card-photo{aspect-ratio:1.8;padding-left:7px}
+ .services-index .reform-card-heading{margin-top:15px;gap:12px}
+ .services-index .reform-card-heading h2{font-size:23px}
+ .services-index .reform-card>p{font-size:13px}
+}
