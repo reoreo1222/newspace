@@ -751,3 +751,30 @@
  .service-refined.service-facade #scope .sd-service-item{min-height:285px;align-content:center}
  .service-refined.service-facade #scope .sd-service-item:after{top:22px;right:22px;width:34px}
 }
+
+/* Facade content stays fluid while avoiding overly wide compositions. */
+.service-refined.service-facade{--sd-content-max:1440px}
+.service-refined.service-facade #scope :is(.sd-scope-intro,.sd-editorial),
+.service-refined.service-facade #approach>div,
+.service-refined.service-facade #approach>ol{width:100%;max-width:var(--sd-content-max);margin-inline:auto;box-sizing:border-box}
+
+/* Turn the three consultation prompts into quiet architectural panels. */
+.service-refined.service-facade #scope .sd-concern-list{gap:clamp(14px,1.7vw,26px)}
+.service-refined.service-facade #scope .sd-concern-list li{display:flex;align-items:center;gap:22px;min-height:116px;padding:32px 52px 28px 28px;border:1px solid #ddd7ca;border-top:2px solid #b39760;background:#f7f5f0;font-family:var(--sd-serif);font-size:clamp(16px,1.15vw,19px);line-height:1.75;letter-spacing:.025em;box-shadow:0 18px 38px -34px #28251f80;transition:transform .35s,box-shadow .35s,border-color .35s}
+.service-refined.service-facade #scope .sd-concern-list li:before,.service-refined.service-facade #scope .sd-concern-list li:after{display:none}
+.service-refined.service-facade #scope .sd-concern-icon{display:grid;place-items:center;flex:0 0 34px;width:34px;height:34px;border:1px solid #b39760;border-radius:50%;color:#9a7840;font:500 14px/1 var(--sd-display)}
+.service-refined.service-facade #scope .sd-concern-list small{position:absolute;top:14px;right:17px;color:#a38c66;font:400 11px/1.2 Georgia,serif;letter-spacing:.12em}
+.service-refined.service-facade #scope .sd-concern-list li:hover{transform:translateY(-3px);border-color:#cbbd9f;box-shadow:0 22px 42px -31px #28251f8c}
+
+/* Keep the first strengths image landscape, consistent with the other stories. */
+.service-refined.service-facade #approach .sd-approach-row:first-child .sd-approach-photo{min-height:0;aspect-ratio:1.5;height:auto;align-self:start}
+.service-refined.service-facade #approach .sd-approach-row:first-child .sd-approach-photo img{object-position:center}
+
+@media(max-width:760px){
+ .service-refined.service-facade #scope .sd-concern-list{gap:12px}
+ .service-refined.service-facade #scope .sd-concern-list li{gap:18px;min-height:90px;padding:24px 42px 22px 20px;font-size:15px}
+ .service-refined.service-facade #scope .sd-concern-icon{flex-basis:30px;width:30px;height:30px}
+ .service-refined.service-facade #scope .sd-concern-list small{top:12px;right:13px}
+ .service-refined.service-facade #scope .sd-concern-list li:hover{transform:none}
+ .service-refined.service-facade #approach .sd-approach-row:first-child .sd-approach-photo{aspect-ratio:1.35}
+}
