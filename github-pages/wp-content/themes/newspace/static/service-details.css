@@ -754,6 +754,7 @@
 
 /* Facade content stays fluid while avoiding overly wide compositions. */
 .service-refined.service-facade{--sd-content-max:1440px}
+.service-refined.service-facade #scope{padding-inline:max(24px,calc((100vw - var(--sd-content-max))/2))}
 .service-refined.service-facade #scope :is(.sd-scope-intro,.sd-editorial),
 .service-refined.service-facade #approach>div,
 .service-refined.service-facade #approach>ol{width:100%;max-width:var(--sd-content-max);margin-inline:auto;box-sizing:border-box}
