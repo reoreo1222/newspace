@@ -14,7 +14,7 @@
   function schedule() {
     clearTimeout(timer);
     if (reduced.matches || document.hidden || !visible || hovered || touching || root.contains(document.activeElement)) return;
-    timer = setTimeout(() => { move((current + 1) % cards.length); schedule(); }, 4000);
+    timer = setTimeout(() => { move((current + 1) % cards.length); schedule(); }, 5500);
   }
   function move(index) {
     track.scrollBy({left: cards[index].getBoundingClientRect().left - track.getBoundingClientRect().left, behavior: reduced.matches ? 'instant' : 'smooth'});

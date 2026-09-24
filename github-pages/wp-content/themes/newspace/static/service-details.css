@@ -729,3 +729,25 @@
 .service-refined .sd-hero-copy{max-width:none;padding-left:6vw;padding-right:6vw}
 .service-refined .sd-hero-copy .sd-script-accent{margin-left:0;transform:rotate(-5deg);transform-origin:left center}
 @media(max-width:760px){.service-refined .sd-hero-copy{padding-left:24px;padding-right:24px}.service-refined .sd-hero-copy .sd-script-accent{transform:rotate(-4deg)}}
+
+/* Facade scope: a balanced landscape image and a taller architectural card. */
+.service-refined.service-facade #scope .sd-service-item{border:1px solid #3d3b35;border-radius:0;background:#292a27;color:#f7f3ea;box-shadow:0 24px 55px -30px #17171499}
+.service-refined.service-facade #scope .sd-service-item:before{width:2px;background:#c0a36c}
+.service-refined.service-facade #scope .sd-service-item:after{content:'';position:absolute;top:28px;right:30px;width:44px;height:1px;background:#c0a36c99}
+.service-refined.service-facade #scope .sd-index{color:#d0b47d;font-size:32px;font-style:italic}
+.service-refined.service-facade #scope .sd-service-copy h3{color:#fff;font-size:clamp(24px,2vw,30px);line-height:1.7;margin-bottom:20px}
+.service-refined.service-facade #scope .sd-service-copy>p:not(.sd-category){color:#d2cec5;line-height:2.15}
+.service-refined.service-facade #scope .sd-carousel-pagination{padding-top:5px}
+@media(min-width:761px){
+ .service-refined.service-facade #scope .sd-editorial{grid-template-columns:minmax(0,1.08fr) minmax(420px,.92fr);gap:7%;align-items:center}
+ .service-refined.service-facade #scope .sd-scope-photo{height:auto;min-height:0;aspect-ratio:4/3}
+ .service-refined.service-facade #scope .sd-scope-photo img{object-position:center}
+ .service-refined.service-facade #scope .sd-carousel{align-self:stretch;display:flex;flex-direction:column;justify-content:center}
+ .service-refined.service-facade #scope .sd-service-list{padding-block:12px 30px}
+ .service-refined.service-facade #scope .sd-service-item{min-height:350px;padding:54px 48px 50px;grid-template-columns:58px minmax(0,1fr);align-content:center;gap:26px}
+ .service-refined.service-facade #scope .sd-service-item:before{top:44px;bottom:44px}
+}
+@media(max-width:760px){
+ .service-refined.service-facade #scope .sd-service-item{min-height:285px;align-content:center}
+ .service-refined.service-facade #scope .sd-service-item:after{top:22px;right:22px;width:34px}
+}
