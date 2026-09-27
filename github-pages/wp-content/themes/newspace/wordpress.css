@@ -184,7 +184,9 @@ body.admin-bar .care-header{top:32px}.ns-article{max-width:1040px;margin:0 auto;
 .residential footer.care-footer .footer-column a:is(:hover,:focus-visible):after{width:100%}
 @media(max-width:900px){
  .residential footer.care-footer{grid-template-columns:1fr}
- .residential footer.care-footer .footer-nav.footer-columns{grid-column:1;gap:24px}
+ .residential footer.care-footer>.care-logo{grid-column:1;grid-row:1}
+ .residential footer.care-footer .footer-nav.footer-columns{grid-column:1;grid-row:2;gap:24px}
+ .residential footer.care-footer>.footer-bottom{grid-column:1;grid-row:3}
 }
 @media(max-width:480px){
  .residential footer.care-footer .footer-nav.footer-columns{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 18px}
@@ -286,4 +288,84 @@ body.admin-bar .care-header{top:32px}.ns-article{max-width:1040px;margin:0 auto;
 @media(max-width:700px){
  .work-detail .ns-article{width:calc(100% - 40px)}
  .work-detail .work-detail-return{margin-top:40px}
+}
+
+/* Mobile navigation and balanced section actions. */
+.residential .care-header nav .mobile-menu-contact,.care-home .mobile-section-cta{display:none}
+@media(max-width:1120px){
+ .residential .care-header>.care-contact{display:none}
+ .residential .care-header .menu-toggle{margin-left:auto;width:44px;height:44px;padding:10px;justify-content:center;align-items:center}
+ .residential .care-header .menu-toggle .hamburger-icon{display:flex;flex-direction:column;justify-content:space-between;width:24px;height:18px;font-size:0}
+ .hamburger-icon i{display:block;width:24px;height:2px;background:currentColor;transition:transform .2s,opacity .2s}
+ .menu-toggle[aria-expanded=true] .hamburger-icon i:nth-child(1){transform:translateY(8px) rotate(45deg)}
+ .menu-toggle[aria-expanded=true] .hamburger-icon i:nth-child(2){opacity:0}
+ .menu-toggle[aria-expanded=true] .hamburger-icon i:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+ .residential .care-header nav .mobile-menu-contact{display:flex;align-self:center;justify-content:center;width:min(260px,100%);margin:18px auto 4px;padding:14px 24px;color:#fff;font-weight:700}
+}
+@media(max-width:700px){
+ .care-home .home-section-heading>a.home-view-all{display:none}
+ .care-home .mobile-section-cta{display:flex;width:220px;min-width:0;max-width:100%;min-height:52px;margin:28px auto 12px;padding:13px 20px;border-color:#aa8b50;gap:24px;font-size:14px;font-weight:700}
+ .care-home .home-about-copy .care-button{width:250px;min-width:0;max-width:100%;min-height:54px;padding:14px 20px;font-size:14px;gap:24px}
+ .residential footer.care-footer{justify-items:center;text-align:center}
+ .residential footer.care-footer .footer-nav.footer-columns{justify-self:center;max-width:420px;gap:20px;align-items:start}
+ .residential footer.care-footer .footer-column{align-items:center;text-align:center}
+ .residential footer.care-footer .footer-service-list{width:100%;text-align:center}
+ .residential footer.care-footer .footer-bottom{width:100%;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:10px;font-size:clamp(9px,2.5vw,10px);white-space:nowrap}
+}
+
+/* Simple home section links, aligned beside the heading at every width. */
+.care-home .home-section-heading>a.home-view-all{display:inline-flex;border:0;background:transparent;min-width:0;min-height:44px;width:auto;padding:8px 0 8px 12px;gap:16px;margin-left:auto;font-size:14px}
+.care-home .home-section-heading>a.home-view-all:is(:hover,:focus-visible){background:transparent;color:#947f5d}
+@media(max-width:700px){
+ .care-home .home-section-heading{flex-wrap:nowrap;gap:10px;justify-content:space-between}
+ .care-home .home-section-heading>a.home-view-all{display:inline-flex;flex-shrink:0;font-size:12px;gap:8px;padding:8px 0;min-height:44px;margin:0 0 0 auto}
+ .care-home .home-section-heading>a.home-view-all span{font-size:20px}
+ .care-home .home-reform .home-section-heading h2,.care-home .home-works .home-section-heading h2{font-size:clamp(19px,5.4vw,25px)}
+}
+
+/* Full-width mobile drawer with a single column and closing contact banner. */
+@media(max-width:1120px){
+ .residential .care-header #navigation{left:0;right:0;width:100%;max-width:none;margin:0;box-sizing:border-box;padding:20px 6% 30px;overscroll-behavior:contain}
+ .residential .care-header #navigation.open{align-items:stretch;flex-direction:column}
+ .residential .care-header #navigation .reform-nav{width:100%}
+ .residential .care-header #navigation .reform-subnav{grid-template-columns:minmax(0,1fr);width:100%;padding:0 0 8px 16px;gap:0;box-sizing:border-box}
+ .residential .care-header #navigation .reform-subnav a{padding:14px 0;min-height:44px}
+ .residential .care-header #navigation .mobile-menu-contact{width:100%;max-width:none;min-height:56px;margin:24px 0 0;padding:16px 24px;box-sizing:border-box;flex-shrink:0;justify-content:center;border:0;border-radius:4px;font-size:16px}
+}
+
+/* Fill the available screen height and center the mobile menu labels. */
+@media(max-width:1120px){
+ .residential .care-header #navigation{height:calc(100dvh - 88px);max-height:calc(100dvh - 88px);text-align:center}
+ .residential .care-header #navigation .reform-nav-trigger{justify-content:center}
+ .residential .care-header #navigation .reform-subnav{padding:0 0 8px}
+ .residential .care-header #navigation .reform-subnav a{justify-content:center}
+ .residential .care-header #navigation .reform-subnav a>span{display:none}
+ .residential .care-header #navigation>a:not(.mobile-menu-contact){text-align:center}
+ .residential .care-header #navigation .reform-nav{flex-shrink:0}
+ .residential .care-header #navigation .mobile-menu-contact{margin-top:auto}
+}
+@media(max-width:700px){
+ .residential .care-header #navigation{height:calc(100dvh - 76px);max-height:calc(100dvh - 76px)}
+}
+@media(max-width:1120px){
+ .residential .care-header #navigation>a:nth-last-child(2){margin-bottom:24px}
+}
+
+/* Evenly spaced mobile links and a pill CTA directly beneath them. */
+@media(max-width:1120px){
+ .residential .care-header #navigation .reform-subnav{padding:0;gap:0}
+ .residential .care-header #navigation a:not(.mobile-menu-contact){display:flex;align-items:center;justify-content:center;min-height:56px;height:56px;padding:14px 0;margin:0;border:0;box-sizing:border-box;line-height:28px;flex-shrink:0}
+ .residential .care-header #navigation a::after{display:none}
+ .residential .care-header #navigation>a:nth-last-child(2){margin-bottom:0}
+ .residential .care-header #navigation .mobile-menu-contact{margin:20px 0 0;border-radius:999px}
+}
+
+/* Indent the four reform destinations beneath their parent menu item. */
+@media(max-width:1120px){
+ .residential .care-header #navigation .reform-nav{width:min(100%,360px);align-self:center}
+ .residential .care-header #navigation .reform-nav-trigger>a{justify-content:flex-start;font-weight:700;font-size:16px}
+ .residential .care-header #navigation .reform-subnav{padding-left:28px}
+ .residential .care-header #navigation .reform-subnav a{justify-content:flex-start;font-size:14px;color:#65675f;gap:12px}
+ .residential .care-header #navigation .reform-subnav a::before{content:'ー';display:block;width:1em;height:auto;flex:none;background:none;color:#65675f;font-family:var(--sans);font-size:14px;font-weight:500;line-height:1}
+ .residential .care-header #navigation>a:not(.mobile-menu-contact){width:min(100%,360px);align-self:center;justify-content:flex-start;font-size:16px}
 }

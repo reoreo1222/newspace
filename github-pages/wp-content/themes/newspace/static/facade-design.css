@@ -238,7 +238,7 @@
 #main.service-designed #scope .sd-concern-icon{width:22px;height:22px;flex-basis:22px;border:0;border-radius:0;background:transparent;color:#aa8b50;font-size:18px}
 @media(max-width:760px){
  #main.service-designed #scope .sd-concern-list{padding:4px 0;margin-top:24px}
- #main.service-designed #scope .sd-concern-list li:nth-child(n){min-height:76px;padding:18px 8px;gap:16px;border-right:0;border-bottom:1px solid #e8e4dc;font-size:15px}
+ #main.service-designed #scope .sd-concern-list li:nth-child(n){min-height:56px;padding:10px 8px;gap:16px;border-right:0;border-bottom:1px solid #e8e4dc;font-size:15px}
  #main.service-designed #scope .sd-concern-list li:last-child{border-bottom:0}
 }
 
@@ -289,4 +289,59 @@
 /* Keep the facade introduction balanced across two lines on desktop. */
 @media(min-width:761px){
  #main.service-facade .sd-hero-description{max-width:1100px;width:100%;text-wrap:initial}
+}
+
+/* Facade introduction: a distinct editorial heading and supporting copy. */
+#main.service-designed .sd-hero-copy{
+ display:grid;grid-template-columns:1fr 1.35fr;align-items:center;gap:clamp(36px,5vw,88px);
+ width:calc(100% - 96px);max-width:1440px;padding:72px 0 28px;text-align:left;
+}
+#main.service-designed .sd-hero-copy .sd-hero-lead{
+ position:relative;font-family:var(--sd-serif);font-size:clamp(32px,3vw,48px);font-weight:500;
+ line-height:1.65;letter-spacing:.055em;margin:0!important;padding:0 0 0 28px;color:#292a27;
+}
+#main.service-designed .sd-hero-copy .sd-hero-lead::before{
+ content:'';position:absolute;left:0;top:.65em;width:9px;height:9px;background:#c5a45f;
+}
+#main.service-designed .sd-hero-copy .sd-hero-description{
+ width:100%;max-width:none;margin:0!important;padding:26px 30px;background:transparent;
+ font-size:clamp(15px,1.1vw,18px);line-height:2.15;color:#55564f;text-align:left;text-wrap:pretty;
+}
+@media(max-width:900px){
+ #main.service-designed .sd-hero-copy{grid-template-columns:1fr;width:calc(100% - 48px);gap:26px;padding:44px 0 12px}
+ #main.service-designed .sd-hero-copy .sd-hero-lead{font-size:clamp(29px,5vw,38px);padding-left:22px}
+ #main.service-designed .sd-hero-copy .sd-hero-description{padding:22px 24px;font-size:15px;line-height:2}
+}
+@media(max-width:380px){
+ #main.service-designed .sd-hero-copy{width:calc(100% - 40px)}
+ #main.service-designed .sd-hero-copy .sd-hero-lead{font-size:27px;letter-spacing:.025em}
+ #main.service-designed .sd-hero-copy .sd-hero-description{padding:20px}
+}
+
+/* Keep the facade introduction heading free of decorative markers. */
+#main.service-designed .sd-hero-copy .sd-hero-lead::before{content:none;display:none}
+#main.service-designed .sd-hero-copy .sd-hero-lead{padding-left:0}
+
+/* More compact service-page heroes on phones. */
+@media(max-width:760px){
+ #main.service-designed .sd-hero-photo{height:280px}
+ #main.service-designed .sd-hero .sd-hero-photo h1{padding-bottom:30px}
+}
+
+/* Center the introduction and let the headline read as a single phrase. */
+#main.service-designed .sd-hero-copy{grid-template-columns:minmax(0,1fr);justify-items:center;gap:28px;text-align:center}
+#main.service-designed .sd-hero-copy .sd-hero-lead{font-size:clamp(18px,4.8vw,44px);text-align:center;letter-spacing:.025em;line-height:1.6;padding:0;text-wrap:balance}
+#main.service-designed .sd-hero-copy .sd-hero-lead br{display:none}
+#main.service-designed .sd-hero-copy .sd-hero-description{max-width:1100px;text-align:center;text-wrap:pretty}
+@media(max-width:760px){
+ #main.service-designed .sd-hero-copy{width:calc(100% - 40px);gap:22px}
+ #main.service-designed .sd-hero-copy .sd-hero-description{padding:20px 16px;font-size:14px}
+}
+
+/* Keep related-service labels small and close to the bottom edge. */
+#main.service-designed .sd-related .care-related a{align-items:flex-end;padding-bottom:16px;font-size:clamp(16px,1.15vw,20px)}
+#main.service-designed .sd-related .care-related a span{font-size:21px;line-height:1.5}
+@media(max-width:760px){
+ #main.service-designed .sd-related .care-related a{padding-bottom:14px;font-size:18px}
+ #main.service-designed .sd-related .care-related a span{font-size:21px}
 }
