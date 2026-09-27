@@ -285,3 +285,8 @@
 #main.service-designed #approach li:nth-child(n) .sd-approach-copy{flex-direction:column;min-width:0;min-height:0;isolation:auto}
 #main.service-designed #approach li:nth-child(n) .sd-approach-number{position:static;z-index:auto;flex:none}
 #main.service-designed #approach li:nth-child(n) .sd-approach-copy :is(h3,p){width:100%;max-width:none;box-sizing:border-box;overflow-wrap:anywhere}
+
+/* Keep the facade introduction balanced across two lines on desktop. */
+@media(min-width:761px){
+ #main.service-facade .sd-hero-description{max-width:1100px;width:100%;text-wrap:initial}
+}

@@ -212,3 +212,78 @@ body.admin-bar .care-header{top:32px}.ns-article{max-width:1040px;margin:0 auto;
  .residential .privacy-page .photo-heading h1{font-size:clamp(22px,6.2vw,34px);letter-spacing:.02em}
  .residential .privacy-page .photo-heading-copy>p{font-size:16px}
 }
+
+/* Frame the new close-up so both the roof and wall remain visible. */
+.care-home .home-reform .care-service-photo.facade img{object-position:center 40%;transform:none}
+.care-home .home-reform .care-service:hover .care-service-photo.facade img{transform:scale(1.035)}
+
+/* Home works: broad landscape photographs with understated captions. */
+.care-home .home-works{padding-top:34px;padding-bottom:48px}
+.care-home .home-works .home-section-heading{margin-bottom:28px}
+.care-home .home-works .work-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.care-home .home-works .work-card{min-width:0}
+.care-home .home-works .work-card-photo{aspect-ratio:1.95;height:auto}
+.care-home .home-works .work-card-photo img{width:100%;height:100%;object-fit:cover;object-position:center}
+.care-home .home-works .work-card-meta{margin-top:16px;font-size:12px;color:#85877f}
+.care-home .home-works .work-card h3{font-family:'Yu Mincho','Hiragino Mincho ProN',Georgia,serif;font-size:clamp(18px,1.15vw,24px);font-weight:500;line-height:1.8;letter-spacing:.035em;margin-top:6px;align-items:center}
+.care-home .home-works .work-card h3 span{font-family:var(--sans);font-size:22px}
+@media(max-width:700px){
+ .care-home .home-works{padding-top:26px;padding-bottom:32px}
+ .care-home .home-works .home-section-heading{margin-bottom:22px}
+ .care-home .home-works .work-grid{grid-template-columns:minmax(0,1fr);gap:30px}
+ .care-home .home-works .work-card-photo{aspect-ratio:1.65}
+ .care-home .home-works .work-card h3{font-size:18px}
+}
+
+/* Dates and service categories form one compact metadata row. */
+.residential .work-card-meta{justify-content:flex-start;gap:14px}
+.residential .work-card-meta .work-card-category{color:#8d7548;font-size:inherit;line-height:inherit}
+
+/* A warm yellow badge makes the work category distinct from its date. */
+.residential .work-card-meta .work-card-category{
+ display:inline-block;background:#80621f;color:#fff;
+ padding:5px 13px;border-radius:3px;font-size:13px;font-weight:700;line-height:1.6;letter-spacing:.035em;
+}
+
+/* Consistent Mincho card typography and a generous three-column works index. */
+.residential .work-card :is(h3,.work-card-meta,.work-card-category){font-family:'Yu Mincho','Hiragino Mincho ProN',Georgia,serif}
+.residential .works-index .works-list{width:100%;max-width:none;margin:0;padding:64px 3% 80px;box-sizing:border-box}
+.residential .works-index .work-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 28px}
+.residential .works-index .work-card{min-width:0}
+.residential .works-index .work-card>a{display:block;padding:0;border:0}
+.residential .works-index .work-card-photo{aspect-ratio:1.95;height:auto}
+.residential .works-index .work-card-photo img{width:100%;height:100%;object-fit:cover;object-position:center}
+.residential .works-index .work-card-meta{margin-top:16px}
+.residential .works-index .work-card h3{display:flex;align-items:center;justify-content:space-between;gap:18px;font-size:clamp(18px,1.15vw,24px);font-weight:500;line-height:1.8;letter-spacing:.035em;margin:6px 0 0}
+.residential .works-index .work-card h3>span{flex-shrink:0;font-size:22px}
+@media(min-width:701px) and (max-width:1000px){
+ .residential .works-index .work-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:700px){
+ .residential .works-index .works-list{padding:36px 20px 48px}
+ .residential .works-index .work-grid{grid-template-columns:minmax(0,1fr);gap:30px}
+ .residential .works-index .work-card-photo{aspect-ratio:1.65}
+ .residential .works-index .work-card h3{font-size:18px}
+}
+
+.residential .work-card-meta time,.work-detail time{color:#111}
+.works-pagination{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:12px;margin-top:48px}
+.works-pagination .page-numbers{display:inline-flex;align-items:center;justify-content:center;min-width:46px;min-height:46px;padding:8px 14px;border:1px solid #d7d1c5;color:#343832;font-size:15px}
+.works-pagination .page-numbers.current{background:#292a27;border-color:#292a27;color:#fff}
+.works-pagination a:hover{background:#eae5da}
+.work-detail .photo-heading h1{font-family:var(--serif);font-weight:500}
+.work-detail .photo-heading-copy>p{font:400 18px/1.8 Georgia,serif;letter-spacing:.08em;color:#fff}
+.work-detail .ns-article{padding-top:64px}
+.work-detail .work-detail-title{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3vw,42px);line-height:1.7;margin:24px 0}
+@media(max-width:700px){.works-pagination{margin-top:32px}.work-detail .ns-article{padding-top:36px}}
+
+/* Article reading width, metadata above the title, and a closing return action. */
+.work-detail .ns-article{width:calc(100% - 56px);max-width:1280px;margin-inline:auto;padding-inline:0;box-sizing:border-box}
+.work-detail .work-detail-meta{margin:0;display:flex;align-items:center;justify-content:flex-start;gap:14px;font-family:'Yu Mincho','Hiragino Mincho ProN',Georgia,serif;font-size:14px}
+.work-detail .work-detail-title{margin-top:20px}
+.work-detail .work-detail-return{display:flex;justify-content:center;margin-top:64px}
+.work-detail .work-detail-return .care-button{min-width:240px;justify-content:center;gap:24px;font-weight:600}
+@media(max-width:700px){
+ .work-detail .ns-article{width:calc(100% - 40px)}
+ .work-detail .work-detail-return{margin-top:40px}
+}
