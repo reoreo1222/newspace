@@ -345,3 +345,10 @@
  #main.service-designed .sd-related .care-related a{padding-bottom:14px;font-size:18px}
  #main.service-designed .sd-related .care-related a span{font-size:21px}
 }
+
+/* Allow strength headings to use the full line before wrapping. */
+#main.service-designed #approach li:nth-child(n) .sd-approach-copy h3{display:block;width:100%;max-width:none;text-wrap:wrap;white-space:normal;word-break:normal;overflow-wrap:break-word}
+#main.service-designed #approach .sd-approach-copy h3 br{display:none}
+@media(max-width:760px){
+ #main.service-designed #scope .sd-service-item{min-height:260px;padding:26px}
+}

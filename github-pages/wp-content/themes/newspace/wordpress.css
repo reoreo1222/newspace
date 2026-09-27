@@ -363,9 +363,24 @@ body.admin-bar .care-header{top:32px}.ns-article{max-width:1040px;margin:0 auto;
 /* Indent the four reform destinations beneath their parent menu item. */
 @media(max-width:1120px){
  .residential .care-header #navigation .reform-nav{width:min(100%,360px);align-self:center}
- .residential .care-header #navigation .reform-nav-trigger>a{justify-content:flex-start;font-weight:700;font-size:16px}
+ .residential .care-header #navigation .reform-nav-trigger>a{justify-content:flex-start;font-weight:400;font-size:16px;color:#343832}
  .residential .care-header #navigation .reform-subnav{padding-left:28px}
  .residential .care-header #navigation .reform-subnav a{justify-content:flex-start;font-size:14px;color:#65675f;gap:12px}
  .residential .care-header #navigation .reform-subnav a::before{content:'ー';display:block;width:1em;height:auto;flex:none;background:none;color:#65675f;font-family:var(--sans);font-size:14px;font-weight:500;line-height:1}
  .residential .care-header #navigation>a:not(.mobile-menu-contact){width:min(100%,360px);align-self:center;justify-content:flex-start;font-size:16px}
+}
+
+/* Match the reform hierarchy in the footer to the navigation menu. */
+.residential footer.care-footer .footer-service-list{padding-left:18px}
+.residential footer.care-footer .footer-service-list a{display:inline-flex;align-items:baseline;gap:8px}
+.residential footer.care-footer .footer-service-list a::before{content:'ー';flex:none;font-size:inherit;line-height:inherit;color:inherit}
+@media(max-width:700px){
+ .residential footer.care-footer .footer-service-list{width:fit-content;max-width:100%;align-self:center;text-align:left;padding-left:12px;box-sizing:border-box}
+}
+
+/* Use the same readable color for parent and child navigation links. */
+.residential footer.care-footer .footer-service-list a{color:#fff}
+@media(max-width:1120px){
+ .residential .care-header #navigation .reform-subnav a,
+ .residential .care-header #navigation .reform-subnav a::before{color:#343832}
 }
