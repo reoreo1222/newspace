@@ -352,3 +352,7 @@
 @media(max-width:760px){
  #main.service-designed #scope .sd-service-item{min-height:260px;padding:26px}
 }
+
+/* Case-card headings wrap at the available edge rather than authored breaks. */
+#main.service-designed .sd-case-copy h3{width:100%;max-width:none;text-wrap:wrap;white-space:normal;word-break:normal;overflow-wrap:break-word}
+#main.service-designed .sd-case-copy h3 br{display:none}
