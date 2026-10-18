@@ -274,11 +274,9 @@
 #main.service-designed #scope .sd-service-copy small{display:block;color:#d1cdc4;font-size:13px;line-height:1.8;margin-top:18px}
 #main.service-designed .sd-related .care-related a[href$="/services/facade/"]{background-image:url('assets/services/exterior.jpg');background-position:center}
 #main.service-designed.service-water .sd-anchor{grid-template-columns:repeat(4,minmax(0,1fr))}
-#main.service-designed.service-water #process .sd-flow{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media(max-width:760px){
  #main.service-designed.service-water .sd-anchor{grid-template-columns:repeat(2,minmax(0,1fr))}
  #main.service-designed.service-water .sd-anchor a:last-child{grid-column:auto}
- #main.service-designed.service-water #process .sd-flow{grid-template-columns:minmax(0,1fr)}
 }
 
 #main.service-designed #approach>div{padding-inline:0;width:100%;max-width:none}

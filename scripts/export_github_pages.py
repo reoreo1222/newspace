@@ -163,6 +163,10 @@ def remove_wordpress_runtime_markup(soup: BeautifulSoup) -> None:
             or "wp-emoji" in src
             or "wpemoji" in script_text.lower()
             or "wp-emoji" in script_text.lower()
+            or "contact-form-7" in src
+            or "wpcf7" in script_id
+            or "wpcf7" in script_text
+            or "swv" in script_id
         ):
             tag.decompose()
     for tag in list(soup.find_all("style")):
@@ -182,6 +186,14 @@ def export_page(route: str, source_origin: str, output: Path) -> None:
     remove_wordpress_runtime_markup(soup)
     ensure_noindex(soup)
 
+    for style in soup.find_all("style"):
+        if style.string:
+            style.string = re.sub(
+                r"url\((['\"]?)([^)'\"]+)\1\)",
+                lambda match: "url('" + rewrite_url(match.group(2), page_file, output, source_origin, source_netloc) + "')",
+                str(style.string),
+            )
+
     for tag in soup.find_all(True):
         for attribute in ("href", "src", "poster"):
             if tag.has_attr(attribute):
@@ -198,6 +210,9 @@ def export_page(route: str, source_origin: str, output: Path) -> None:
     for form in soup.select("form.ns-contact-form"):
         form["action"] = "#"
         form["data-static-preview"] = "true"
+        for hidden in form.select('input[type="hidden"]'):
+            hidden.decompose()
+        form.attrs.pop("novalidate", None)
 
     preview_css = soup.new_tag("link", rel="stylesheet", href=relative_reference(page_file, output, "/preview.css"))
     soup.head.append(preview_css)

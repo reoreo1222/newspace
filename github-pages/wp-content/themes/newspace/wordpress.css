@@ -384,3 +384,13 @@ body.admin-bar .care-header{top:32px}.ns-article{max-width:1040px;margin:0 auto;
  .residential .care-header #navigation .reform-subnav a,
  .residential .care-header #navigation .reform-subnav a::before{color:#343832}
 }
+
+/* Contact Form 7 retains the existing contact page styling. */
+.ns-contact-form .wpcf7-form-control-wrap{display:block}
+.ns-contact-form .field p{margin:0}
+.ns-contact-form input.wpcf7-submit{width:auto;padding:18px 40px;background:#252525;color:#fff;border:0;cursor:pointer}
+.ns-contact-form .wpcf7-list-item{margin:0}
+.ns-contact-form .wpcf7-acceptance label{display:flex;align-items:baseline;gap:10px}
+.ns-contact-form .wpcf7-acceptance input{flex:none;width:18px;height:18px}
+.ns-contact-form .wpcf7-not-valid-tip{font-size:14px;margin-top:8px}
+.ns-contact-form .wpcf7-response-output{margin:24px 0;padding:18px}
